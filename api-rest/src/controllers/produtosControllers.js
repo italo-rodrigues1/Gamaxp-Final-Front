@@ -8,3 +8,15 @@ exports.getAll = (req, res) => {
   })   
   
 }
+
+exports.getOneId = (req, res, next) => {
+
+  const {id} = req.params;
+  
+  knex.where({id : id}).table("livros").then(data => {
+    return res.status(201).json(data)
+  }).catch(err =>{
+    return res.status(400).json(err)
+  });
+
+}
