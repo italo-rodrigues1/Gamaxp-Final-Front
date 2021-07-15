@@ -7,10 +7,10 @@
     "express": "^4.17.1",
     "knex": "^0.95.6",
     "mysql2": "^2.2.5",
-    "nodemon": "^2.0.10"
+    "nodemon": "^2.0.10",
+    "yarn": "^1.22.10"
   },
-
   "scripts": {
-    "start":"nodemon server.js"
+    "start": "nodemon server.js"
   }
 }
