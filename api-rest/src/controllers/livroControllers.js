@@ -40,15 +40,17 @@ exports.delete = (req, res) => {
   })
 }
 
-exports.update = (req, res) => {
-  const { id, titulo, descricao, idade, destaque, idAutor, idCategoria, idEditora, imagem } = req.body
-  knex('livros').where({ id: id }).update({ titulo: titulo, descricao: descricao, idade: idade, destaque: destaque, idAutor: idAutor, idCategoria: idCategoria, idEditora: idEditora, imagem: imagem }).then((livro) => {
-    if (livro == 0) {
-      return res.status(400).json({ message: "Livro não encontrado em nosso banco de dados!" });
-    }
-    return res.status(200).json({ message: "Livro alterado com sucesso" });
-  })
+exports.update = async (req, res) => {
+  const { id } = req.params
+  const {titulo, descricao, idade, destaque, idAutor, idCategoria, idEditora,	imagem } = req.body
+  knex('livros').where({id: id}).update({titulo: titulo, descricao: descricao, idade: idade, destaque: destaque, idAutor: idAutor, idCategoria: idCategoria, idEditora: idEditora, imagem: imagem}).then((livro)=>{
+      if (livro == 0){
+        return res.status(400).json({message: "Livro não encontrado em nosso banco de dados!"});
+      }
+      return res.status(200).json({message: "Livro alterado com sucesso"});
+  })       
 }
+
 
 
 
