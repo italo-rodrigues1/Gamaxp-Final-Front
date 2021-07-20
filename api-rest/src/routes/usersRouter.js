@@ -1,26 +1,47 @@
-// routes.get('/livros/:id', produtosController.getOneId);
-// routes.get('/livros/autor/:id', produtosController.getAutor);
+// routes.get('/livros/:id', livrosControllers.getOneId);
+// routes.get('/livros/autor/:id', livrosControllers.getAutor);
 // routes.get('/livros/editora/:id', produtosController.getEditora);
 
 const Router = require('express'); 
 const livroController = require('../controllers/livroControllers') ;
 const usuarioController = require('../controllers/usuarioControllers');
+const autorController = require('../controllers/autorControllers')
+const editoraController = require('../controllers/editoraControllers')
 const routes = Router(); 
 
 
-routes.get('/livros', livroController.getAll);//PRONTO
-routes.get('/livros/faixaetaria/:faixaetaria', livroController.getFaixaEtaria);//PRONTO
 
-routes.get('/usuario', usuarioController.getUsuario);//PRONTO
+routes.get('/livro/faixaetaria/:faixaetaria', livroController.getFaixaEtaria);//PRONTO
 
+routes.get('/livro', livroController.getAll);
 
-
-
-routes.put('/livros', livroController.update);//PRONTO
+routes.get('/usuario', usuarioController.getUsuario);
 
 
-routes.delete('/livros/:id', livroController.delete);//PRONTO
+routes.post('/livro', livroController.createLivros);
+routes.post('/autor', autorController.createAutor);
+routes.post('/editora',editoraController.createEditora);
+routes.post('/usuario',usuarioController.createUsuario);
 
 
+
+
+
+routes.put('/livro', livroController.update);//PRONTO
+
+
+routes.delete('/livro/:id', livroController.delete);//PRONTO
+
+
+
+// routes.put('/livros/:id'.livroController.update);
+// routes.put('/livros/autor/:id'.livroController.update);
+// routes.put('/livros/editora/:id'.livroController.update);
+
+// routes.delete('/livros/:id'.livroController.delete);
+// routes.delete('/livros/autor/:id'.livroController.delete);
+// routes.delete('/livros/editora/:id'.livroController.delete);
+// routes.delete('/usuario'.livroController.delete);
 
 module.exports = routes;
+
