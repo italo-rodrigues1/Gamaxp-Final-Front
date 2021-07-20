@@ -1,6 +1,8 @@
 const Yup = require('yup');
 const knex = require('../database/index');
 
+
+
 exports.createEditora = async (req, res) => {
 
     const { nome } = req.body;
