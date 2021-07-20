@@ -56,9 +56,8 @@ exports.createLivros = (req, res) => {
 
   const data = { titulo, descricao, idade, destaque, idAutor, idCategoria, idEditora, imagem };
 
-  knex.insert(data).into('livros').then(data => {
-    return res.status(201).json({message: 'Produto inserido com sucesso na base de dados.'});
-    // return res.status(201).json({data});
+  knex.insert(data).into('livros').then(dataResponse => {
+    return res.status(201).json({message: 'Produto inserido com sucesso na base de dados.', data})
 
   }).catch(err => {
     console.log(err);
