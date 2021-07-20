@@ -1,12 +1,12 @@
 const Yup = require('yup');
 const knex = require('../database/index');
 
-exports.getUsuario = (req, res) => {
 
+
+exports.getUsuario = (req, res) => {
     knex('usuario').then((produtos) => {
         return res.status(200).json(produtos);
     })
-
 };
 
 
@@ -14,7 +14,6 @@ exports.getUsuario = (req, res) => {
 exports.createUsuario = async (req, res) => {
 
     const { nome, email } = req.body;
-
     const data = { nome, email };
 
     const validar = await Yup.object().shape({

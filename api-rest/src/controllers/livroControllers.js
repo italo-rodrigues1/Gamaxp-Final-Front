@@ -4,14 +4,11 @@ const knex = require('../database/index');
 
 
 exports.getAll = (req, res) => {
-
-
   knex('livros').then((livros) => {
     return res.status(200).json(livros);
-
   })
-
 }
+
 
 
 exports.getFaixaEtaria = (req, res) => {
@@ -31,6 +28,8 @@ exports.getFaixaEtaria = (req, res) => {
   })
 }
 
+
+
 exports.delete = (req, res) => {
   knex('livros').where('id', req.params.id).del().then((livro) => {
     if (livro == 0) {
@@ -40,24 +39,24 @@ exports.delete = (req, res) => {
   })
 }
 
+
+
 exports.update = async (req, res) => {
   const { id } = req.params
-  const {titulo, descricao, idade, destaque, idAutor, idCategoria, idEditora,	imagem } = req.body
-  knex('livros').where({id: id}).update({titulo: titulo, descricao: descricao, idade: idade, destaque: destaque, idAutor: idAutor, idCategoria: idCategoria, idEditora: idEditora, imagem: imagem}).then((livro)=>{
-      if (livro == 0){
-        return res.status(400).json({message: "Livro não encontrado em nosso banco de dados!"});
-      }
-      return res.status(200).json({message: "Livro alterado com sucesso"});
-  })       
+  const { titulo, descricao, idade, destaque, idAutor, idCategoria, idEditora, imagem } = req.body
+  knex('livros').where({ id: id }).update({ titulo: titulo, descricao: descricao, idade: idade, destaque: destaque, idAutor: idAutor, idCategoria: idCategoria, idEditora: idEditora, imagem: imagem }).then((livro) => {
+    if (livro == 0) {
+      return res.status(400).json({ message: "Livro não encontrado em nosso banco de dados!" });
+    }
+    return res.status(200).json({ message: "Livro alterado com sucesso" });
+  })
 }
-
 
 
 
 exports.createLivros = async (req, res) => {
 
   const { titulo, descricao, idade, destaque, idAutor, idCategoria, idEditora, imagem } = req.body;
-
   const data = { titulo, descricao, idade, destaque, idAutor, idCategoria, idEditora, imagem };
 
   const validar = await Yup.object().shape({
