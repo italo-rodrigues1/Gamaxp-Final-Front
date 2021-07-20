@@ -32,6 +32,9 @@ exports.getFaixaEtaria = (req, res) => {
         if (faixaEtaria[0] >= faixaEtariaCompara[0] && faixaEtaria[0] <= faixaEtariaCompara[1] || faixaEtaria[1] >= faixaEtariaCompara[0] && faixaEtaria[1] <= faixaEtariaCompara[1])
         retorno.push(produtos[i])         
       }
+      if (retorno[0] == null){
+        return res.status(400).json({message: "Nenhum livro encontrado para esta faixa etária"});
+      }
       return res.status(200).json(retorno);
   })       
 }
