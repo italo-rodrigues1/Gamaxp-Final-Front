@@ -10,14 +10,29 @@ const editoraController = require('../controllers/editoraControllers')
 const routes = Router(); 
 
 
+
+routes.get('/livro/faixaetaria/:faixaetaria', livroController.getFaixaEtaria);//PRONTO
+
 routes.get('/livro', livroController.getAll);
-// routes.get('/livros/idade/:idade', livroController.getIdade);
+
 routes.get('/usuario', usuarioController.getUsuario);
+
 
 routes.post('/livro', livroController.createLivros);
 routes.post('/autor', autorController.createAutor);
 routes.post('/editora',editoraController.createEditora);
 routes.post('/usuario',usuarioController.createUsuario);
+
+
+
+
+
+routes.put('/livro', livroController.update);//PRONTO
+
+
+routes.delete('/livro/:id', livroController.delete);//PRONTO
+
+
 
 // routes.put('/livros/:id'.livroController.update);
 // routes.put('/livros/autor/:id'.livroController.update);
@@ -29,3 +44,4 @@ routes.post('/usuario',usuarioController.createUsuario);
 // routes.delete('/usuario'.livroController.delete);
 
 module.exports = routes;
+
