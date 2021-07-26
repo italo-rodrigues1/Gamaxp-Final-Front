@@ -27,7 +27,7 @@ routes.post('/usuario',usuarioController.createUsuario);
 
 
 
-routes.put('/livro', livroController.update);//PRONTO
+routes.put('/livro/:id', livroController.update);//PRONTO
 
 
 routes.delete('/livro/:id', livroController.delete);//PRONTO
