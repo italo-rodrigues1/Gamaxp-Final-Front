@@ -11,20 +11,27 @@ function Home() {
                 <header className="App-header">
                     <div className="logo">logo</div>
                     <ul>
-                        <li>listar todos os livros</li>
-                        <li>Contato</li>
+                        <li>
+                            <a href='#sobre'>Listar todos os livros</a>
+                        </li>
+                        <li>
+                            <a href='#contato'>Contato</a>
+                        </li>
                     </ul>
                 </header>
                 <div className="hero">
                     <div className="title">
-                        <span>texto</span>
-                        <p>texto2</p>
-                        <Link to="#">trocar pelo link</Link>
+                        <h3>Aqui vamos descrever em duas linhas nossa proposta de valor</h3>
+                        <p>Textinho auxiliar para reforçar a linha acima</p>
+                        <Link className='btn-hero' to="#">Conheça a gente</Link>
                     </div>
-                    <div className="descriptionHero">
-                        <img src={imgHero} alt="imagem da descrição" />
-                        <span>texto lá de baixo no hero </span>
+                    <div className='image-hero'>
+                        <img src={ imgHero} alt='imagem principal'/>
                     </div>
+                </div>
+                <div className="descriptionHero">
+                    <img src={imgHero} alt="imagem da descrição" />
+                    <span>texto lá de baixo no hero </span>
                 </div>
             </section>
 
@@ -58,7 +65,7 @@ function Home() {
 
             <section id="beneficios">
                 <h2>
-                    Benefícios para os pais e crianças comprovados 
+                    Benefícios para os pais e crianças comprovados
                 </h2>
                 <p>
                     Subtítulo
@@ -120,7 +127,7 @@ function Home() {
                         Seg - Sex : 9h às 18h
                     </p>
                     <strong>
-                        Política de privacidade <br></br> Termos de uso                      
+                        Política de privacidade <br></br> Termos de uso
                     </strong>
                 </div>
                 <div className="formulario">
@@ -132,7 +139,7 @@ function Home() {
                     </form>
                 </div>
             </section>
-        </div>
+        </div >
     );
 }
 
