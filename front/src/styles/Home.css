@@ -5,7 +5,94 @@
 }
 
 body {
-    background: #111;
+    background: rgb(48, 187, 106);
     color: #fff;
-    height: 100vw;
+    
 }
+
+.App {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center;
+}
+
+header {
+    height: 80px;
+    width: 1440px;
+    background: rgb(255, 255, 255);
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header .logo {
+    width: 100px;
+    height: 40px;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    margin: 0 10px;
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: rgb(121, 119, 119);
+}
+
+/* Aqui termina o header */
+
+.hero {
+    display: flex;
+    width: 1440px;
+    background: rgb(84, 84, 201);
+    align-items: center;
+
+}
+
+.hero .image-hero {
+    width: 50%;
+    padding: 50px 0;
+    
+}
+
+.hero .image-hero img {
+    width: 100%;
+    max-width: 500px;
+    
+}
+
+.hero .title {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.hero .title .btn-hero {
+    background: black;
+    text-decoration: none;
+    color: white;
+    padding: 10px 65px;
+    margin-top: 10px;
+    
+}
+
