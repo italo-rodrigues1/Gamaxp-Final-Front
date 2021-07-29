@@ -9,57 +9,65 @@ function Home() {
 
             <section>
                 <header className="App-header">
-                    <div className="logo">logo</div>
-                    <ul>
-                        <li>
-                            <a href='#sobre'>Listar todos os livros</a>
-                        </li>
-                        <li>
-                            <a href='#contato'>Contato</a>
-                        </li>
-                    </ul>
+                    <div className='container'>
+                        <div className="logo">logo</div>
+                        <ul>
+                            <li>
+                                <a href='#sobre'>Listar todos os livros</a>
+                            </li>
+                            <li>
+                                <a href='#contato'>Contato</a>
+                            </li>
+                        </ul>
+                    </div>
                 </header>
                 <div className="hero">
-                    <div className="title">
-                        <h3>Aqui vamos descrever em duas linhas nossa proposta de valor</h3>
-                        <p>Textinho auxiliar para reforçar a linha acima</p>
-                        <Link className='btn-hero' to="#">Conheça a gente</Link>
-                    </div>
-                    <div className='image-hero'>
-                        <img src={ imgHero} alt='imagem principal'/>
+                    <div className='container'>
+                        <div className="title">
+                            <h3>Aqui vamos descrever em duas linhas nossa proposta de valor</h3>
+                            <p>Textinho auxiliar para reforçar a linha acima</p>
+                            <Link className='btn-hero' to="#">Conheça a gente</Link>
+                        </div>
+                        <div className='image-hero'>
+                            <img src={imgHero} alt='imagem principal' />
+                        </div>
                     </div>
                 </div>
-                <div className="descriptionHero">
+                <div className="tarja-MEC">
                     <img src={imgHero} alt="imagem da descrição" />
-                    <span>texto lá de baixo no hero </span>
+                    <span>Somos a única editora blá bla bla Somos a única editora blá bla bla Somos a única editora blá bla bla </span>
                 </div>
             </section>
 
             <section id="sobre">
-                <img src={imgHero} alt="imagem sobre" />
-                <div className="title-sobre">
-                    <h3>
-                        Nessa seção vamos explicar melhor sobre as recomendações que temos
-                    </h3>
-                    <p>
-                        E os benefícios que nossa seleção de produtos trará,
-                        metodologias utilizadas na escolha dos materiais
-                    </p>
-                    <strong>
-                        Desenvolva a empatia em seus filhos
-                    </strong>
-                    <p>
-                        Contextualização do tópico
-                    </p>
-                    <strong>
-                        Criatividade, imaginação e diversão
-                    </strong>
-                    <p>
-                        Contextualização do tópico
-                    </p>
-                    <Link to="/livros">
-                        Veja a nossa seleção
-                    </Link>
+                <div className='container'>
+                    <div className='img-selecao'>
+                        <img src={imgHero} alt="imagem sobre"/>
+                    </div>
+                    <div className="title-selecao">
+                        <h3>
+                            Nessa seção vamos explicar melhor sobre as recomendações que temos
+                        </h3>
+                        <p>
+                            E os benefícios que nossa seleção de produtos trará,
+                            metodologias utilizadas na escolha dos materiais
+                        </p>
+                        <strong>
+                            Desenvolva a empatia em seus filhos
+                        </strong>
+                        <p>
+                            Contextualização do tópico
+                        </p>
+                        <strong>
+                            Criatividade, imaginação e diversão
+                        </strong>
+                        <p>
+                            Contextualização do tópico
+                        </p>
+                        <Link to="/livros">
+                            Veja a nossa seleção
+                        </Link>
+                    </div>
                 </div>
             </section>
 
