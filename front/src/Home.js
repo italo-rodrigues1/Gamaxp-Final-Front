@@ -2,6 +2,7 @@ import React from 'react';
 import imgHero from './img/imgHero.jpg';
 import { Link } from 'react-router-dom';
 import './styles/Home.css';
+import Backtotop from './components/buttonBackToTop'
 
 function Home() {
     return (
@@ -42,7 +43,7 @@ function Home() {
             <section id="sobre">
                 <div className='container'>
                     <div className='img-selecao'>
-                        <img src={imgHero} alt="imagem sobre"/>
+                        <img src={imgHero} alt="imagem sobre" />
                     </div>
                     <div className="title-selecao">
                         <h3>
@@ -64,7 +65,7 @@ function Home() {
                         <p>
                             Contextualização do tópico
                         </p>
-                        <Link to="/livros">
+                        <Link className="btn-selecao" to="/livros">
                             Veja a nossa seleção
                         </Link>
                     </div>
@@ -72,81 +73,86 @@ function Home() {
             </section>
 
             <section id="beneficios">
-                <h2>
-                    Benefícios para os pais e crianças comprovados
-                </h2>
-                <p>
-                    Subtítulo
-                </p>
-                <div>
-                    <div>
+                <div className="main">
+                    <h4>
+                        Benefícios para os pais e crianças comprovados
+                    </h4>
+                    <p>
+                        Subtítulo
+                    </p>
+                    <div className="main-box">
+                        <div className="square">
+                            <div className="circle">
 
-                    </div>
-                    <div>
-                        <span>
-                            Beneficio 1
-                        </span>
-                    </div>
-                    <div>
+                            </div>
+                            <span>
+                                beneficio 1
+                            </span>
+                        </div>
+                        <div className="square">
+                            <div className="circle">
 
-                    </div>
-                    <div>
-                        <span>
-                            Beneficio 2
-                        </span>
-                    </div>
-                    <div>
+                            </div>
+                            <span>
+                                beneficio 2
+                            </span>
+                        </div>
+                        <div className="square">
+                            <div className="circle">
 
-                    </div>
-                    <div>
-                        <span>
-                            Beneficio 3
-                        </span>
-                    </div>
-                    <div>
+                            </div>
+                            <span>
+                                beneficio 3
+                            </span>
+                        </div>
+                        <div className="square">
+                            <div className="circle">
 
-                    </div>
-                    <div>
-                        <span>
-                            Beneficio 4
-                        </span>
+                            </div>
+                            <span>
+                                beneficio 4
+                            </span>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section id="contato">
-                <div className="description-contato">
-                    <h2>
-                        Informações sobre a gente
-                    </h2>
-                    <p>
-                        Endereço, telefone e redes sociais
-                    </p>
-                    <strong>
-                        Precisa de ajuda?
-                    </strong>
-                    <p>
-                        Entre em contato através do e-mail
-                    </p>
-                    <strong>
-                        suporte@nossamarca.com.br
-                    </strong>
-                    <p>
-                        Seg - Sex : 9h às 18h
-                    </p>
-                    <strong>
-                        Política de privacidade <br></br> Termos de uso
-                    </strong>
-                </div>
-                <div className="formulario">
-                    <h2>Fique por dentro das novidades</h2>
-                    <form>
-                        <input type="text" placeholder="Seu nome" />
-                        <input type="email" placeholder="Email" />
-                        <button type="submit" value="Enviar"></button>
-                    </form>
+                <div className="contato">
+                    <div className="description-contato">
+                        <h2>
+                            Informações sobre a gente
+                        </h2>
+                        <p>
+                            Endereço, telefone e redes sociais
+                        </p>
+                        <strong>
+                            Precisa de ajuda?
+                        </strong>
+                        <p>
+                            Entre em contato através do e-mail
+                        </p>
+                        <strong>
+                            suporte@nossamarca.com.br
+                        </strong>
+                        <p>
+                            Seg - Sex : 9h às 18h
+                        </p>
+                        <strong>
+                            Política de privacidade <br></br> Termos de uso
+                        </strong>
+                    </div>
+                    <div className="formulario">
+                        <h3>Fique por dentro das novidades</h3>
+                        <form>
+                            <input type="text" placeholder="Seu nome" />
+                            <input type="email" placeholder="Email" />
+                            <button type="submit">Quero receber novidades</button>
+                        </form>
+                    </div>
                 </div>
             </section>
+            <Backtotop />
         </div >
     );
 }

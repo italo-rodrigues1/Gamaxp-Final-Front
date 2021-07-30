@@ -1,9 +1,10 @@
 import React from 'react';
-
-export function buttonBackToTop(){
+import './styles/buttonBackToTop.css'
+function buttonBackToTop(){
 return (
     <div className="back-to-top">
-        Voltar ao topo
+        <span>Voltar ao topo</span>
     </div>
     )
 };
+export default buttonBackToTop;
