@@ -211,6 +211,7 @@ header ul li a:hover {
 /* seleção termina aqui */
 
 .main {
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,43 +219,63 @@ header ul li a:hover {
     background-color: #FFFFFF;
     padding: 10px 0px;
     font-family: 'Poppins', sans-serif;
-    font-size: 26px;
     color: #3D405B;
+
+}
+
+.main h4 {
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 50px;
 }
 
 .main .main-box {
     width: 1440px;
     height: 200px;
-    background-color: rgb(146, 20, 20);
     display: flex;
     align-items: center;
     justify-content: center; 
 }
 
 .main .main-box > div {
-    width: 1440px;
-    height: 200px;
-    background-color: rgb(146, 20, 20);
+    width: 250px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+}
+
+.main .main-box > div img {
+    width: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.main .main-box > div span {
+    width: 50%;
+    text-align: center;
 }
 
 
 /* beneficios termina aqui */
 
 .contato {
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #F4F1DE;
+    background-color: #3D405B;
+    font-family: 'Poppins', sans-serif;
+    color: #F4F1DE;
         
 }
 
 .contato .description-contato {
    margin-right: 35px;
-   color: #111;
+   
 }
 
 .contato .formulario {
