@@ -1,3 +1,9 @@
+/* font-family: 'Indie Flower', cursive; /*chaloops*/
+
+/*font-family: 'Poppins', sans-serif;
+
+font-family: 'Roboto', sans-serif; */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +12,6 @@
 
 body {
     background: rgb(48, 187, 106);
-    color: #fff; 
 }
 
 .container {
@@ -19,10 +24,8 @@ body {
 .App {
     height: auto;
     width: 100%;
-    /* display: flex; */
     justify-content: center;
     flex-direction: column;
-    /* padding: 0 20px; */
     align-items: center;
 }
 
@@ -31,22 +34,25 @@ body {
 header {
     height: 80px;
     width: 100%;
-    background: rgb(255, 255, 255);
     color: #111;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    padding: 60px 0;
 
 }
 
 header .logo {
-    width: 100px;
-    height: 40px;
-    background: black;
-    color: white;
+    width: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+header .logo img {
+    width: 100%;
+    height: 100%;
 }
 
 header ul {
@@ -56,11 +62,22 @@ header ul {
 header ul li {
     margin: 0 10px;
     list-style: none;
+    padding: 10px;
 }
 
 header ul li a {
     text-decoration: none;
-    color: rgb(121, 119, 119);
+    color: #3D405B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .2s linear;
+}
+
+header ul li a:hover {
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
+    font-weight: 900;
 }
 
 /* Aqui termina o header */
@@ -68,36 +85,48 @@ header ul li a {
 .hero {
     display: flex;
     width: 100%;
-    background: rgb(84, 84, 201);
+    height: 90vh;
+    background: url('../img/banner_urso_desktop.jpg') no-repeat center;
+    background-size: cover;
     align-items: center;
     justify-content: center;
-}
 
-.hero .image-hero {
-    width: 50%;
-    padding: 50px 0;
-}
-
-.hero .image-hero img {
-    width: 100%;
-    max-width: 400px;
-    
 }
 
 .hero .title {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-end;
+    color: #3D405B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
 }
 
 .hero .title .btn-hero {
-    background: black;
+    background: #81B29A;
+    height: 95px;
+    width: 360px;
     text-decoration: none;
     color: white;
-    padding: 10px 65px;
-    margin-top: 10px;
+    margin-top: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.hero .title .btn-hero:hover {
+    transform: scale(105%);
+    background-color: #3D405B;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    font-weight: 600;
+
 }
 
 /* hero termina aqui */
@@ -105,28 +134,27 @@ header ul li a {
 .tarja-MEC {
     display: flex;
     width: 100%;
-    height: 150px;
-    background: rgb(204, 88, 165);
+    height: 180px;
+    background: #FFFFFF;
     align-items: center;
     justify-content: center;
 }
 
 .tarja-MEC img {
-    border-radius: 50%;
-    height: 100px;
+    height: 140px;
 }
 
 .tarja-MEC span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
     margin-left: 20px;
-    font-size: clamp(1em, 1em + 1vw, 1.5em);
-    width: 500px;
+    color: #3D405B;
 }
 
 /* tarja-MEC termina aqui */
 
-.img-selecao {
+/* .img-selecao {
     width: 50%;
-
 }
 
 .img-selecao img {
@@ -134,10 +162,14 @@ header ul li a {
     max-width: 350px;
     margin: 0 auto;
     display: flex;
-}
+} */
 
 #sobre {
     width: 100%;
+    height: 85vh;
+    background: url('../img/banner_uni_desktop.jpg') no-repeat center;
+    background-size: cover;
+    background-position: bottom center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,91 +177,110 @@ header ul li a {
 }
 
 .title-selecao {
-    width: 50%;
+    width: 45%;
+    font-family: 'Poppins', sans-serif;
 }
 
 .title-selecao h3 {
-    margin-bottom: 10px;
+    margin-bottom: 35px;
+    color: #F2CC8F;
+    font-size: 30px;
 }
 
 .title-selecao p {
-    margin: 10px 0;
+    margin: 25px 0;
+    color: #F4F1DE;
+    font-size: 20px;
+    text-align: justify;
 }
 
 .btn-selecao {
-    display: block;
-    padding: 10px;
-    background-color:#111;
-    width:330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#81B29A;
+    height: 105px;
+    width:590px;
     text-decoration: none;
-    color: #fff;
-    text-align: center;
+    color: #FFFFFF;
+    font-size: 22px;
+    margin-top: 50px;
+    
 }
 
 /* seleção termina aqui */
 
 .main {
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #111;
+    background-color: #FFFFFF;
     padding: 10px 0px;
+    font-family: 'Poppins', sans-serif;
+    color: #3D405B;
+
+}
+
+.main h4 {
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 50px;
 }
 
 .main .main-box {
     width: 1440px;
     height: 200px;
-    background-color: rgb(146, 20, 20);
     display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.main .main-box > div {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.main .main-box .square {
-    width: 150px;
-    height: 100px;
-    position: relative;
-    background-color: rgb(111, 19, 177);
-    margin: 5px;
-    align-items: flex-start;
-    display: flex;
+.main .main-box > div img {
+    width: 100px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    margin-bottom: 15px;
+}
+
+.main .main-box > div span {
+    width: 50%;
     text-align: center;
 }
 
-.main .main-box .square .circle {
-    background-color: rgb(29, 181, 29);
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: -40px;
-    /* left: 35px; */
-}
-
-.square span {
-    position: absolute;
-    bottom: 30%;
-}
 
 /* beneficios termina aqui */
 
 .contato {
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    background-color: #3D405B;
+    font-family: 'Poppins', sans-serif;
+    color: #F4F1DE;
         
 }
 
 .contato .description-contato {
    margin-right: 35px;
+   
 }
 
 .contato .formulario {
     margin-left: 35px;
-    background-color: rgb(211, 0, 116);
+    background-color: #81B29A;
     width: 300px;
     height: 200px;
     align-items: center;
@@ -247,17 +298,17 @@ header ul li a {
 
 .contato .formulario form input{
     outline: 0;
-    border: 1px solid #fff;
+    border: none;
+    background: #FFFFFF;
     margin-bottom: 10px;
     padding: 10px 40px;
-    background: none; 
     color: #111;
 }
 
 .contato .formulario form button{
     width: 80%;
     height: 40px;
-    background: #111;
+    background: #E07A5F;
     border: none;
     border-radius: 5px;
     color: #fff;
