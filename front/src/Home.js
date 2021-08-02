@@ -1,5 +1,6 @@
 import React from 'react';
-import imgHero from './img/imgHero.jpg';
+import logo from './img/logo_home.png';
+import passarinho from './img/passarinho.png'
 import { Link } from 'react-router-dom';
 import './styles/Home.css';
 import Backtotop from './components/buttonBackToTop'
@@ -11,13 +12,13 @@ function Home() {
             <section>
                 <header className="App-header">
                     <div className='container'>
-                        <div className="logo">logo</div>
+                        <div className="logo"><img src={logo} alt="logo" /></div>
                         <ul>
                             <li>
-                                <a href='#sobre'>Listar todos os livros</a>
+                                <a href='#sobre'>Livros por idade</a>
                             </li>
                             <li>
-                                <a href='#contato'>Contato</a>
+                                <a href='#contato'>Sobre</a>
                             </li>
                         </ul>
                     </div>
@@ -25,48 +26,31 @@ function Home() {
                 <div className="hero">
                     <div className='container'>
                         <div className="title">
-                            <h3>Aqui vamos descrever em duas linhas nossa proposta de valor</h3>
-                            <p>Textinho auxiliar para reforçar a linha acima</p>
-                            <Link className='btn-hero' to="#">Conheça a gente</Link>
-                        </div>
-                        <div className='image-hero'>
-                            <img src={imgHero} alt='imagem principal' />
+                            <h3>Viaje com o seu pequeno por <br></br>lugares incríveis através da leitura.</h3>
+                            <Link className='btn-hero' to="#">Embarque aqui</Link>
                         </div>
                     </div>
                 </div>
                 <div className="tarja-MEC">
-                    <img src={imgHero} alt="imagem da descrição" />
-                    <span>Somos a única editora blá bla bla Somos a única editora blá bla bla Somos a única editora blá bla bla </span>
+                    <img src={passarinho} alt="pássaro lendo" />
+                    <span>Somos reconhecidos pelos melhores profissionais em Educação, Psicologia e Pedagogia, por disponibilizar<br></br> em nosso catálogo títulos de qualidade que proporcionam a melhor experiência de aprendizagem infantil. </span>
                 </div>
             </section>
 
             <section id="sobre">
                 <div className='container'>
-                    <div className='img-selecao'>
-                        <img src={imgHero} alt="imagem sobre" />
-                    </div>
                     <div className="title-selecao">
                         <h3>
-                            Nessa seção vamos explicar melhor sobre as recomendações que temos
+                            Títulos cuidadosamente selecionados!
                         </h3>
                         <p>
-                            E os benefícios que nossa seleção de produtos trará,
-                            metodologias utilizadas na escolha dos materiais
+                            Cada fase das crianças é única, assim como a forma que elas aprendem e se desenvolvem.
                         </p>
-                        <strong>
-                            Desenvolva a empatia em seus filhos
-                        </strong>
                         <p>
-                            Contextualização do tópico
-                        </p>
-                        <strong>
-                            Criatividade, imaginação e diversão
-                        </strong>
-                        <p>
-                            Contextualização do tópico
+                            Através de uma curadoria com especialistas de Educação, Psicologia e Pedagogia, nós selecionamos os melhores títulos de literatura infatil e infanto-juvenil.
                         </p>
                         <Link className="btn-selecao" to="/livros">
-                            Veja a nossa seleção
+                            Encante-se com nossa seleção de livros
                         </Link>
                     </div>
                 </div>
@@ -75,42 +59,31 @@ function Home() {
             <section id="beneficios">
                 <div className="main">
                     <h4>
-                        Benefícios para os pais e crianças comprovados
+                        Benefícios comprovados para os pais e crianças
                     </h4>
-                    <p>
-                        Subtítulo
-                    </p>
                     <div className="main-box">
-                        <div className="square">
-                            <div className="circle">
-
-                            </div>
+                        <div>
+                            <img src={passarinho} alt="desenvolve a compreensão" />
                             <span>
-                                beneficio 1
+                                Desenvolve a compreensão
                             </span>
                         </div>
-                        <div className="square">
-                            <div className="circle">
-
-                            </div>
+                        <div>
+                            <img src={passarinho} alt="aumenta o vocabulário" />
                             <span>
-                                beneficio 2
+                                Aumenta o vocabulário
                             </span>
                         </div>
-                        <div className="square">
-                            <div className="circle">
-
-                            </div>
+                        <div>
+                            <img src={passarinho} alt="incentiva a imaginação" />
                             <span>
-                                beneficio 3
+                                Incentiva a imaginação
                             </span>
                         </div>
-                        <div className="square">
-                            <div className="circle">
-
-                            </div>
+                        <div>
+                            <img src={passarinho} alt="estimula atitudes éticas" />
                             <span>
-                                beneficio 4
+                                Estimula atitudes éticas
                             </span>
                         </div>
                     </div>
@@ -121,22 +94,16 @@ function Home() {
                 <div className="contato">
                     <div className="description-contato">
                         <h2>
-                            Informações sobre a gente
+                            Era uma vez...
                         </h2>
                         <p>
-                            Endereço, telefone e redes sociais
+                            Um grupo de amigos que acreditavam que a leitura tinha o poder de transformar vidas. Esses amigos uniram suas habilidades para criar um portal mágico cujo propósito é unir crianças (de todas as idades) ao mundo encantado que existe dentro das páginas de cada livro.
                         </p>
                         <strong>
                             Precisa de ajuda?
                         </strong>
                         <p>
-                            Entre em contato através do e-mail
-                        </p>
-                        <strong>
-                            suporte@nossamarca.com.br
-                        </strong>
-                        <p>
-                            Seg - Sex : 9h às 18h
+                            Entre em contato através do e-mail suporte@livrertido.com.br
                         </p>
                         <strong>
                             Política de privacidade <br></br> Termos de uso
@@ -145,8 +112,8 @@ function Home() {
                     <div className="formulario">
                         <h3>Fique por dentro das novidades</h3>
                         <form>
-                            <input type="text" placeholder="Seu nome" />
-                            <input type="email" placeholder="Email" />
+                            <input type="text" placeholder="NOME" />
+                            <input type="email" placeholder="EMAIL" />
                             <button type="submit">Quero receber novidades</button>
                         </form>
                     </div>
