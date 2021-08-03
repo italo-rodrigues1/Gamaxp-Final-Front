@@ -151,18 +151,6 @@ header ul li a:hover {
     color: #3D405B;
 }
 
-/* tarja-MEC termina aqui */
-
-/* .img-selecao {
-    width: 50%;
-}
-
-.img-selecao img {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-    display: flex;
-} */
 
 #sobre {
     width: 100%;
@@ -205,7 +193,17 @@ header ul li a:hover {
     color: #FFFFFF;
     font-size: 22px;
     margin-top: 50px;
-    
+    transition: .2s linear;
+}
+
+.btn-selecao:hover {
+    background-color:#F2CC8F;
+    color: #3D405B;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    font-weight: 600;
+    transform: scale(105%);
+
 }
 
 /* seleção termina aqui */
@@ -274,19 +272,29 @@ header ul li a:hover {
 }
 
 .contato .description-contato {
-   margin-right: 35px;
+   width: 40%;
    
 }
 
+.contato .description-contato > p {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    width: 72%;
+    text-align: justify;
+}
+
 .contato .formulario {
-    margin-left: 35px;
-    background-color: #81B29A;
-    width: 300px;
-    height: 200px;
-    align-items: center;
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 280px;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    justify-content: center;
     padding: 10px 0px;
+    border-radius: 20px;
+    color: #000000;
+    margin-left: 80px;
 }
 
 .contato .formulario form {
@@ -298,18 +306,29 @@ header ul li a:hover {
 
 .contato .formulario form input{
     outline: 0;
-    border: none;
+    border: 2px solid #A8A8A8;
     background: #FFFFFF;
     margin-bottom: 10px;
-    padding: 10px 40px;
-    color: #111;
+    padding: 0 20px;
+    height: 40px;
+    width: 280px;    
+    color: #000000;
 }
 
-.contato .formulario form button{
+.contato .formulario form input::placeholder {
+    color: #000000;
+}
+
+.contato .formulario form button {
     width: 80%;
     height: 40px;
     background: #E07A5F;
     border: none;
     border-radius: 5px;
     color: #fff;
+    cursor: pointer;
+}
+
+.contato .formulario form button:hover {
+    opacity: 0.8;
 }
