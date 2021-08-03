@@ -112,8 +112,8 @@ function Home() {
                     <div className="formulario">
                         <h3>Fique por dentro das novidades</h3>
                         <form>
-                            <input type="text" placeholder="NOME" />
-                            <input type="email" placeholder="EMAIL" />
+                            <input type="text" placeholder="Seu nome" />
+                            <input type="email" placeholder="Email" />
                             <button type="submit">Quero receber novidades</button>
                         </form>
                     </div>

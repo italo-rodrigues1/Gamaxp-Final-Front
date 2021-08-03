@@ -1,26 +1,24 @@
 .back-to-top {
     position: fixed;
-    bottom: 10px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #123;
+    border: 2px solid #F2CC8F;
+    background-color: #3D405B;
     z-index: 2;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
 
-.back-to-top::before {
-    position: absolute;
-    content: '↑';
-    top: 12px;
-    left: 40%;
+.arrow {
+    color: #F2CC8F;
 }
 
-.back-to-top span {
-    width: 70px;
-    position: absolute;
-    bottom: -10px;
-    right: -17px;
-    font-size: 10px;
+.back-to-top:hover {
+    opacity: 0.5;
 }
