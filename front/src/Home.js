@@ -1,28 +1,16 @@
 import React from 'react';
-import logo from './img/logo_home.png';
 import passarinho from './img/passarinho.png'
 import { Link } from 'react-router-dom';
 import './styles/Home.css';
 import Backtotop from './components/buttonBackToTop'
+import FooterContato from './components/footer';
+import HeaderTopo from './components/header';
 
 function Home() {
     return (
         <div className="App">
-
             <section>
-                <header className="App-header">
-                    <div className='container'>
-                        <div className="logo"><img src={logo} alt="logo" /></div>
-                        <ul>
-                            <li>
-                                <a href='#sobre'>Livros por idade</a>
-                            </li>
-                            <li>
-                                <a href='#contato'>Sobre</a>
-                            </li>
-                        </ul>
-                    </div>
-                </header>
+                <HeaderTopo />
                 <div className="hero">
                     <div className='container'>
                         <div className="title">
@@ -89,36 +77,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-
-            <section id="contato">
-                <div className="contato">
-                    <div className="description-contato">
-                        <h2>
-                            Era uma vez...
-                        </h2>
-                        <p>
-                            Um grupo de amigos que acreditavam que a leitura tinha o poder de transformar vidas. Esses amigos uniram suas habilidades para criar um portal mágico cujo propósito é unir crianças (de todas as idades) ao mundo encantado que existe dentro das páginas de cada livro.
-                        </p>
-                        <strong>
-                            Precisa de ajuda?
-                        </strong>
-                        <p>
-                            Entre em contato através do e-mail suporte@livrertido.com.br
-                        </p>
-                        <strong>
-                            Política de privacidade <br></br> Termos de uso
-                        </strong>
-                    </div>
-                    <div className="formulario">
-                        <h3>Fique por dentro das novidades</h3>
-                        <form>
-                            <input type="text" placeholder="Seu nome" />
-                            <input type="email" placeholder="Email" />
-                            <button type="submit">Quero receber novidades</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
+            <FooterContato />
             <Backtotop />
         </div >
     );
