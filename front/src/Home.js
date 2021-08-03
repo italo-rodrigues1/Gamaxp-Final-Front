@@ -15,7 +15,7 @@ function Home() {
                     <div className='container'>
                         <div className="title">
                             <h3>Viaje com o seu pequeno por <br></br>lugares incríveis através da leitura.</h3>
-                            <Link className='btn-hero' to="#">Embarque aqui</Link>
+                            <Link className='btn-hero' to="/livros">Embarque aqui</Link>
                         </div>
                     </div>
                 </div>

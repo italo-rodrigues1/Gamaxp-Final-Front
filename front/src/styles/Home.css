@@ -12,6 +12,7 @@ font-family: 'Roboto', sans-serif; */
 
 body {
     background: rgb(48, 187, 106);
+    scroll-behavior: smooth;
 }
 
 .container {
