@@ -8,10 +8,15 @@ font-family: 'Roboto', sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     background: rgb(48, 187, 106);
+    /* scroll-behavior: smooth; */
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -50,7 +55,7 @@ body {
     align-items: flex-start;
     justify-content: flex-end;
     color: #3D405B;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-size: 35px;
     font-weight: 400;
 }
@@ -60,7 +65,7 @@ body {
     height: 95px;
     width: 360px;
     text-decoration: none;
-    color: white;
+    color: #FFFFFF;
     margin-top: 50px;
     font-size: 20px;
     display: flex;
@@ -73,10 +78,7 @@ body {
 .hero .title .btn-hero:hover {
     transform: scale(105%);
     background-color: #3D405B;
-    font-family: 'Indie Flower', cursive;
-    font-size: 30px;
     font-weight: 600;
-
 }
 
 /* hero termina aqui */
@@ -95,7 +97,7 @@ body {
 }
 
 .tarja-MEC span {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-size: 18px;
     margin-left: 20px;
     color: #3D405B;
@@ -116,7 +118,7 @@ body {
 
 .title-selecao {
     width: 45%;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 .title-selecao h3 {
@@ -149,10 +151,11 @@ body {
 .btn-selecao:hover {
     background-color:#F2CC8F;
     color: #3D405B;
-    font-family: 'Indie Flower', cursive;
-    font-size: 30px;
-    font-weight: 600;
+    /* font-family: 'Indie Flower', cursive; */
+    /* font-size: 30px; */
+    /* font-weight: 600; */
     transform: scale(105%);
+    font-weight: 600;
 
 }
 
@@ -166,7 +169,7 @@ body {
     flex-direction: column;
     background-color: #FFFFFF;
     padding: 10px 0px;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     color: #3D405B;
 
 }
