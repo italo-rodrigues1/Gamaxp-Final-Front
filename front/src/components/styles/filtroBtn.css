@@ -1,0 +1,19 @@
+.filtro-btn {
+    height: 150px;
+    background: #ffffff  ;
+}
+
+.filtro-btn button {
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    color: #3D405B;
+    background: #F2CC8F;
+}
+
+/* .filtro-btn button img {
+    height: 100%;
+} */

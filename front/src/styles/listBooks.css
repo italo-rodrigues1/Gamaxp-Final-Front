@@ -1,0 +1,22 @@
+.selecao-idade {
+    height: 500px;
+    width: 100%;
+    background: #3D405B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.title-selecao-livros {
+    height: 100%;
+    width: 1440px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-selecao-livros h2 {
+    width: 400px;
+}

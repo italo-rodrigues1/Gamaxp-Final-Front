@@ -1,5 +1,10 @@
 import React from 'react';
 import passarinho from './img/passarinho.png'
+import beneficio1 from './img/beneficio1.png'
+import beneficio2 from './img/beneficio2.png'
+import beneficio21 from './img/beneficio21.svg'
+import beneficio3 from './img/beneficio3.png'
+import beneficio4 from './img/beneficio4.png'
 import { Link } from 'react-router-dom';
 import './styles/Home.css';
 import Backtotop from './components/buttonBackToTop'
@@ -51,25 +56,25 @@ function Home() {
                     </h4>
                     <div className="main-box">
                         <div>
-                            <img src={passarinho} alt="desenvolve a compreensão" />
+                            <img src={beneficio1} alt="desenvolve a compreensão" />
                             <span>
                                 Desenvolve a compreensão
                             </span>
                         </div>
                         <div>
-                            <img src={passarinho} alt="aumenta o vocabulário" />
+                            <img src={beneficio21} alt="aumenta o vocabulário" />
                             <span>
                                 Aumenta o vocabulário
                             </span>
                         </div>
                         <div>
-                            <img src={passarinho} alt="incentiva a imaginação" />
+                            <img src={beneficio3} alt="incentiva a imaginação" />
                             <span>
                                 Incentiva a imaginação
                             </span>
                         </div>
                         <div>
-                            <img src={passarinho} alt="estimula atitudes éticas" />
+                            <img src={beneficio4} alt="estimula atitudes éticas" />
                             <span>
                                 Estimula atitudes éticas
                             </span>
