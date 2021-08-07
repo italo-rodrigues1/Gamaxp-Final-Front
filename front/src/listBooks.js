@@ -18,18 +18,6 @@ function listBooks() {
         </div>
       </div>
       <FiltroBtn/>
-
-
-
-
-
-
-
-
-
-
-
-
       <FooterContato />
       <Backtotop />
     </div>

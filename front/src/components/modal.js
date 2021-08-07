@@ -10,7 +10,7 @@ const ModalLivro = () => {
     return (
         <div className="container-modal">
             <div className='modal'>
-                <div>
+                <div className='title-modal'>
                     <h2>Como é bom dormir</h2>
                     <p>Descrição</p>
                     <p>Autor</p>

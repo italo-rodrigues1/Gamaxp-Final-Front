@@ -24,6 +24,12 @@
     height: 500px;
     width: 900px;
     border-radius: 20px;
+    overflow: hidden;
+}
+
+.container-modal .modal .title-modal{
+    width:100%;
+    padding:50px;
 }
 
 .container-modal .modal .img-livro {
