@@ -4,13 +4,15 @@ import FooterContato from './components/footer';
 import HeaderTopo from './components/header';
 import FiltroBtn from './components/filtroBtn';
 import ModalLivro from './components/modal';
+import Pagination from './components/paginacao';
 import './styles/listBooks.css'
 
 function listBooks() {
+  
+  const api = 'https://kitsu.io/api/edge/';
 
   return (
     <div>
-      <ModalLivro />
       <HeaderTopo />
       <div className='selecao-idade'>
         <div className='title-selecao-livros'>

@@ -4,8 +4,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: absolute; */
-    padding: 60px 0;
+    padding: 60px 10px;
     background: #ffffff;
 
 }
@@ -32,15 +31,6 @@ header ul li {
     padding: 10px;
 }
 
-/* header ul li:hover {
-    transform: scale(110%);
-} */
-
-/* header ul li:hover, a:hover {
-    font-family: 'Indie Flower', cursive;
-    font-weight: 600;
-    transform: scale(120%);
-} */
 
 header ul li a {
     text-decoration: none;

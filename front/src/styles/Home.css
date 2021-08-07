@@ -11,13 +11,9 @@ font-family: 'Roboto', sans-serif; */
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+body,html {
     background: rgb(48, 187, 106);
-    /* scroll-behavior: smooth; */
-}
-
-html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
 }
 
 .container {
@@ -25,6 +21,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
 }
 
 .App {
@@ -43,7 +40,7 @@ html {
     background-size: cover;
     align-items: center;
     justify-content: center;
-
+    padding: 20px;
 }
 
 .hero .title {
@@ -88,6 +85,7 @@ html {
     background: #FFFFFF;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .tarja-MEC img {

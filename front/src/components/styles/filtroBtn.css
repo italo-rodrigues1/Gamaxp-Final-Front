@@ -1,6 +1,9 @@
 .filtro-btn {
     height: 150px;
-    background: #ffffff  ;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .filtro-btn button {
@@ -12,8 +15,5 @@
     cursor: pointer;
     color: #3D405B;
     background: #F2CC8F;
+    margin: 0 30px;
 }
-
-/* .filtro-btn button img {
-    height: 100%;
-} */
