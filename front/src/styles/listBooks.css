@@ -1,20 +1,20 @@
 .selecao-idade {
     height: 500px;
     width: 100%;
-    background: #3D405B;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    background:url('../img/banner_3.jpg')no-repeat center;
 }
 
 .title-selecao-livros {
     height: 100%;
     width: 1440px;
-    color: #ffffff;
+    color: #3D405B;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding: 41px;
 }
 
 .title-selecao-livros h2 {
