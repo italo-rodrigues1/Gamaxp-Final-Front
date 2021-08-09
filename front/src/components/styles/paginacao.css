@@ -31,3 +31,14 @@
 .pagination__item--active:focus{
     background:#3D405B;
 }
+
+/******************************************* RESPONSIVIDADE ****************************************** */
+
+
+@media screen and (max-width:450px){
+    .pagination li{
+        margin: 0 auto;
+    }
+
+    
+}

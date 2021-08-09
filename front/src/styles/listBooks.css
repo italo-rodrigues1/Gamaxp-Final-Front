@@ -35,12 +35,13 @@ li{
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding-bottom: 25px;
+    grid-gap: 3rem;
 }
 
 .group-item .item{
-    margin: 50px;
     width: 200px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .group-item .item img{
@@ -60,4 +61,31 @@ li{
     color:#fff;
     font-size:10px;
     cursor: pointer;
+}
+
+.group-item .item button:hover{
+    opacity: 0.8;
+}
+
+/******************************************* RESPONSIVIDADE ****************************************** */
+
+
+@media screen and (max-width:946px){
+    .group-item{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:700px){
+    .group-item{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:451px){
+    .group-item{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    
 }

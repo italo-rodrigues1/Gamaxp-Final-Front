@@ -33,6 +33,11 @@ const ListBooks = () => {
       }
     };
 
+    if (text) {
+      query.filter = {
+        text
+      };
+    }
     
     fetch(`${api}anime?${qs.stringify(query)}`)
     .then((response) => response.json())
@@ -53,10 +58,12 @@ const ListBooks = () => {
           <h2>Encante-se com nossa seleção de livros por idade</h2>
         </div>
       </div>
+
       <FiltroBtn 
         value={text}
         onChange={(search) => setText(search)}
       />
+      
 
       {livros.data && (
         <ul className="group-item">

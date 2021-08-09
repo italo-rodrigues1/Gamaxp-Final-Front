@@ -1,26 +1,26 @@
-import React, { useState }from 'react';
+import React, { useState } from 'react';
 import './styles/filtroBtn.css'
 import useDebounce from './useDebounce';
 
-const FiltroBtn = ({value}) => {
+const FiltroBtn = ({value,onChange}) => {
     const [displayValue, setDisplayValue] = useState(value);
-    const debouncedChange = useDebounce('onChange', 500);
+    const debouncedChange = useDebounce(onChange, 500);
 
     function handleChange(event) {
         setDisplayValue(event.target.value);
         debouncedChange(event.target.value);
     }
-    
+        
     return (
-    <div className="filtro-btn">
-        <button
-        type="search"
-        value={displayValue}
-        onChange={handleChange}
-        ></button>
 
-
-    </div>
+        <div className="filtro-btn">
+            <input
+                type="search"
+                value={displayValue}
+                onChange={handleChange}
+            />
+            
+        </div>
 
 
 
