@@ -7,47 +7,30 @@ import ModalLivro from "./components/modal";
 import Pagination from "./components/paginacao";
 import "./styles/listBooks.css";
 import qs from 'qs';
-import axios from 'axios';
+// import axios from 'axios';
+import { api } from "./services/api";
 
-const api = 'https://kitsu.io/api/edge/';
+// const api = 'https://gamaxpfinalapi.herokuapp.com/';
 
 const LIMIT = 12;
 
 const ListBooks = () => {
+
   const [offset, setOffset] = useState(0);
   const [livros, setItens] = useState([]);
   const [text, setText] = useState('');
-  
 
- 
 
   useEffect(() => {
+
+
+    api.get("/").then((res) => setItens(res.data));
     
-    
-    setItens({})
 
-    const query = {
-      page: {
-        limit: LIMIT,
-        offset
-      }
-    };
+  }, []);
 
-    if (text) {
-      query.filter = {
-        text
-      };
-    }
-    
-    fetch(`${api}anime?${qs.stringify(query)}`)
-    .then((response) => response.json())
-    .then((response) => {
-      setItens(response);
-    });
-
-   
-
-  }, [text, offset]);
+  const livro = api.get("/");
+ 
 
 
   return (
@@ -62,17 +45,21 @@ const ListBooks = () => {
       <FiltroBtn 
         value={text}
         onChange={(search) => setText(search)}
-      />
-      
+      /> 
+       
 
       {livros.data && (
         <ul className="group-item">
           {livros.data.map((item) => {
             return (
               <li className="item" key={item.id}>
-                <img src={item.attributes.posterImage.small} width="40%" />
-                <h2>{item.attributes.titles.en}</h2>
-                <button onclick={ModalLivro}>Veja mais</button>
+                <img src={item.imagem} width="40%" />
+                <div className="title-group-item">
+                  <h2>{item.titulo}</h2>
+                  <p>{item.descricao}</p>
+                  <button onClick={ModalLivro}>Veja mais</button>
+                </div>
+                
               </li>
             );
           })}
@@ -80,7 +67,7 @@ const ListBooks = () => {
       )}
 
 
-
+{/* 
       {livros.meta && (
             <Pagination
               limit={LIMIT}
@@ -88,7 +75,12 @@ const ListBooks = () => {
               offset={offset}
               setOffset={setOffset}
             />
-      )}
+      )} */}
+
+      {/* {livros.data && (
+        <ModalLivro />
+      )} */}
+      
       <FooterContato />
       <Backtotop />
     </div>

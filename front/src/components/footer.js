@@ -1,5 +1,8 @@
 import React from 'react';
 import './styles/footer.css'
+import { Link } from 'react-router-dom';
+import politicaPrivacidade from '../img/Politica_Privacidade.pdf';
+import temosUso from '../img/Termos_de_uso.pdf';
 
 function footerContato() {
     return (
@@ -19,7 +22,7 @@ function footerContato() {
                         Entre em contato através do e-mail suporte@livrertido.com.br
                     </p>
                     <strong>
-                        Política de privacidade <br></br> Termos de uso
+                       <Link to={politicaPrivacidade} target="_blank" className="politica-privacidade">Política de privacidade </Link> <br></br> <Link to={temosUso} target="_blank" className="politica-privacidade">Termos de uso</Link> 
                     </strong>
                 </div>
                 <div className="formulario">

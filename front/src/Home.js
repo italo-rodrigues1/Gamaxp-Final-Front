@@ -19,8 +19,8 @@ function Home() {
                 <div className="hero">
                     <div className='container'>
                         <div className="title">
-                            <h3>Viaje com o seu pequeno por <br></br>lugares incríveis através da leitura.</h3>
-                            <Link className='btn-hero' to="/livros">Embarque aqui</Link>
+                            <h3>Viaje com o seu pequeno por <br></br>lugares incríveis através da leitura</h3>
+                            <a className='btn-hero' href="#sobre">Embarque aqui</a>
                         </div>
                     </div>
                 </div>
@@ -42,8 +42,8 @@ function Home() {
                         <p>
                             Através de uma curadoria com especialistas de Educação, Psicologia e Pedagogia, nós selecionamos os melhores títulos de literatura infatil e infanto-juvenil.
                         </p>
-                        <Link className="btn-selecao" to="/livros">
-                            Encante-se com nossa seleção de livros
+                        <Link className="btn-selecao"  to="/livros">
+                           Descubra nossa seleção de livros
                         </Link>
                     </div>
                 </div>
