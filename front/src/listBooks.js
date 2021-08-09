@@ -6,33 +6,43 @@ import FiltroBtn from "./components/filtroBtn";
 import ModalLivro from "./components/modal";
 import Pagination from "./components/paginacao";
 import "./styles/listBooks.css";
-import { api } from "./services/api";
+import qs from 'qs';
+import axios from 'axios';
 
-
+const api = 'https://kitsu.io/api/edge/';
 
 const LIMIT = 12;
 
 const ListBooks = () => {
- 
   const [offset, setOffset] = useState(0);
   const [livros, setItens] = useState([]);
-
+  const [text, setText] = useState('');
   
 
  
 
   useEffect(() => {
+    
+    
     setItens({})
+
     const query = {
       page: {
         limit: LIMIT,
         offset
       }
     };
-    api.get("/").then((res) => setItens(res.data));
-  }, [offset]);
 
-  // const livro = api.get("/");
+    
+    fetch(`${api}anime?${qs.stringify(query)}`)
+    .then((response) => response.json())
+    .then((response) => {
+      setItens(response);
+    });
+
+   
+
+  }, [text, offset]);
 
 
   return (
@@ -43,7 +53,10 @@ const ListBooks = () => {
           <h2>Encante-se com nossa seleção de livros por idade</h2>
         </div>
       </div>
-      <FiltroBtn />
+      <FiltroBtn 
+        value={text}
+        onChange={(search) => setText(search)}
+      />
 
       {livros.data && (
         <ul className="group-item">
@@ -52,12 +65,15 @@ const ListBooks = () => {
               <li className="item" key={item.id}>
                 <img src={item.attributes.posterImage.small} width="40%" />
                 <h2>{item.attributes.titles.en}</h2>
-                <button>Veja mais</button>
+                <button onclick={ModalLivro}>Veja mais</button>
               </li>
             );
           })}
         </ul>
       )}
+
+
+
       {livros.meta && (
             <Pagination
               limit={LIMIT}

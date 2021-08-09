@@ -21,7 +21,7 @@
 }
 
 .pagination__item--active{
-    background: #3D405B !important;;
+    background: #3D405B !important;
     border-radius: 50px;
     border: none;
     padding: 7px 15px;
