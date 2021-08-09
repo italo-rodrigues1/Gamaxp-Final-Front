@@ -9,6 +9,7 @@ import "./styles/listBooks.css";
 import { api } from "./services/api";
 
 
+
 const LIMIT = 12;
 
 const ListBooks = () => {
@@ -16,7 +17,18 @@ const ListBooks = () => {
   const [offset, setOffset] = useState(0);
   const [livros, setItens] = useState([]);
 
+  
+
+ 
+
   useEffect(() => {
+    setItens({})
+    const query = {
+      page: {
+        limit: LIMIT,
+        offset
+      }
+    };
     api.get("/").then((res) => setItens(res.data));
   }, [offset]);
 
