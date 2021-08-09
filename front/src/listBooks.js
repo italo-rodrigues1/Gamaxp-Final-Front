@@ -1,57 +1,63 @@
-import React,{useEffect,useState} from 'react';
-import Backtotop from './components/buttonBackToTop'
-import FooterContato from './components/footer';
-import HeaderTopo from './components/header';
-import FiltroBtn from './components/filtroBtn';
-import ModalLivro from './components/modal';
-import Pagination from './components/paginacao';
-import './styles/listBooks.css';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import Backtotop from "./components/buttonBackToTop";
+import FooterContato from "./components/footer";
+import HeaderTopo from "./components/header";
+import FiltroBtn from "./components/filtroBtn";
+import ModalLivro from "./components/modal";
+import Pagination from "./components/paginacao";
+import "./styles/listBooks.css";
+import { api } from "./services/api";
+
+
+const LIMIT = 12;
 
 const ListBooks = () => {
-  
-  // const api = 'https://kitsu.io/api/edge/anime';
+ 
+  const [offset, setOffset] = useState(0);
+  const [livros, setItens] = useState([]);
 
-  const [livros, setItens] = useState([])
-  
-  useEffect(()=>{
-    const fetchData = async () =>{
-      const result = axios.get('https://kitsu.io/api/edge/anime')
-      .then(response => response.json())
-      .then(data => data)
+  useEffect(() => {
+    api.get("/").then((res) => setItens(res.data));
+  }, [offset]);
 
-      setItens(result)
+  // const livro = api.get("/");
 
-    }
-    fetchData()
-  },[])
-
-  console.log(livros)
 
   return (
     <div>
       <HeaderTopo />
-      <div className='selecao-idade'>
-        <div className='title-selecao-livros'>
+      <div className="selecao-idade">
+        <div className="title-selecao-livros">
           <h2>Encante-se com nossa seleção de livros por idade</h2>
         </div>
       </div>
-      <FiltroBtn/>
+      <FiltroBtn />
 
       {livros.data && (
-        <ul>
-        {livros.data.map(item => {
-          return <div className="item"  key={item.id}>
-            <img src={item.anime.attributes.posterImage.small} width='40%'/> 
-          </div>
-        })} 
+        <ul className="group-item">
+          {livros.data.map((item) => {
+            return (
+              <li className="item" key={item.id}>
+                <img src={item.attributes.posterImage.small} width="40%" />
+                <h2>{item.attributes.titles.en}</h2>
+                <button>Veja mais</button>
+              </li>
+            );
+          })}
         </ul>
       )}
-
+      {livros.meta && (
+            <Pagination
+              limit={LIMIT}
+              total={livros.meta.count}
+              offset={offset}
+              setOffset={setOffset}
+            />
+      )}
       <FooterContato />
       <Backtotop />
     </div>
-  )
-}
+  );
+};
 
 export default ListBooks;

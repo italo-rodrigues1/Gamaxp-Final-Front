@@ -1,4 +1,7 @@
 import React from 'react';
+import './styles/paginacao.css'
+import { MdKeyboardArrowLeft } from 'react-icons/md';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const MAX_ITEMS = 9;
 const MAX_LEFT = (MAX_ITEMS - 1) / 2;
@@ -24,7 +27,7 @@ const Pagination = ({
           onClick={() => onPageChange(current - 1)}
           disabled={current === 1}
         >
-          Anterior
+         <MdKeyboardArrowLeft/> Anterior
         </button>
       </li>
       {Array.from({ length: Math.min(MAX_ITEMS, pages) })
@@ -48,9 +51,12 @@ const Pagination = ({
           onClick={() => onPageChange(current + 1)}
           disabled={current === pages}
         >
-          Próxima
+           Próxima <MdKeyboardArrowRight/>
         </button>
       </li>
     </ul>
   );
 };
+
+
+export default Pagination;
