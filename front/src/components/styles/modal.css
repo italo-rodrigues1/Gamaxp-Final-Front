@@ -56,19 +56,44 @@
 
 .container-modal .modal  .btn-modal-close{
     position: absolute;
-    right: 22px;
-    padding: 10px 15px;
+    right: 8px;
+    padding: 4px 11px;
     margin: 10px 0;
-    background: none;
     border: none;
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.84);
+    border-radius: 50%;
 }
 
 .container-modal .modal  .btn-modal-close:hover{
-    border-radius: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.57);
+}
+
+
+
+/**************************************** RESPONSIVO ****************************************/
+
+
+@media screen and (max-width:766px){
+    .container-modal .modal .title-modal{
+       overflow:scroll;
+    }
+
+}
+
+
+@media screen and (max-width:500px){
+    .container-modal .modal {
+
+        overflow: auto;
+        flex-direction: column;
+    }
+    .container-modal .modal .img-livro {
+        overflow: hidden;
+        width: 100%;
+    }
 
 }

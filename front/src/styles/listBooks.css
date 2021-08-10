@@ -120,11 +120,7 @@ li{
     }
 
     .selecao-idade {
-        height: 500px;
-        width: 100%;
-        background:url('../img/banner_3.jpg')no-repeat center;
-        background-size: cover;
-        background-color:#F2CC8F;
+        background-position-x: 73%;
     }
 }
 
@@ -132,12 +128,21 @@ li{
     .group-item{
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .title-selecao-livros h2 {
+        width: auto;
+    }
+
+    .container-filter button {
+    
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width:451px){
     .group-item{
         grid-template-columns: repeat(1, 1fr);
     }
-
+    
 
 }

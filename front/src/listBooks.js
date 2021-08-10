@@ -11,7 +11,6 @@ import qs from "qs";
 import { AiFillInstagram } from "react-icons/ai";
 import { RiFacebookFill } from "react-icons/ri";
 import { AiOutlineTwitter } from "react-icons/ai";
-// import axios from 'axios';
 import { api } from "./services/api";
 
 // const api = 'https://gamaxpfinalapi.herokuapp.com/';
@@ -21,7 +20,6 @@ const LIMIT = 12;
 const ListBooks = () => {
   const [offset, setOffset] = useState(0);
   const [livros, setItens] = useState([]);
-  // const [text, setText] = useState('');
   const [filteredPolls, setfilteredLivros] = useState(null);
   const [modalId, setModalId] = useState(false);
   const [arrayModal, setArrayModal] = useState([]);
@@ -30,6 +28,8 @@ const ListBooks = () => {
   const [titulo, setTitulo] = useState("");
   const [descricao, setDescricao] = useState("");
   const [idade, setIdade] = useState(0);
+  const [autor, setAutor] = useState("");
+  const [editora, setEditora] = useState("");
 
   useEffect(() => {
     setItens({});
@@ -37,13 +37,7 @@ const ListBooks = () => {
     api.get("/").then((res) => setItens(res.data));
   }, []);
 
-  function asduhasd(item) {
-    // setModalId(!modalId);
-    // setImagem(item.imagem);
-    // setTitulo(item.titulo);
-    // setDescricao(item.descricao);
-    // setId(item.id);
-  }
+ 
   
   // const livro = api.get("/");
 
@@ -122,6 +116,8 @@ const ListBooks = () => {
                         setTitulo(item.titulo);
                         setIdade(item.idade);
                         setDescricao(item.descricao);
+                        setAutor(item.autor);
+                        setEditora(item.editora);
                         
                       }}
                     >
@@ -137,9 +133,11 @@ const ListBooks = () => {
                     <h2>{titulo}</h2>
                     <p>Recomendados para : {idade}</p>
                     <p>{descricao}</p>
+                    <p>Autor: {autor}</p>
+                    <p>Editora: {editora}</p>
                     
                     
-                    <div>
+                    {/* <div>
                       Redes Sociais
                       <Link to="#" className="link">
                         <AiFillInstagram />
@@ -150,7 +148,7 @@ const ListBooks = () => {
                       <Link to="#">
                         <AiOutlineTwitter />
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="img-livro">
                     <img src={image} alt="capa do livro" />
