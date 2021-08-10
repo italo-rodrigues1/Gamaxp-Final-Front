@@ -24,6 +24,7 @@ const ListBooks = () => {
   // const [text, setText] = useState('');
   const [filteredPolls, setfilteredLivros] = useState(null)
   const [modalId, setModalId] = useState(null);
+  const [arrayModal ,setArrayModal] = useState([])
 
   useEffect(() => {
 
@@ -35,7 +36,7 @@ const ListBooks = () => {
 
   }, []);
 
-  const livro = api.get("/");
+  // const livro = api.get("/");
 
 
 
@@ -68,7 +69,13 @@ const ListBooks = () => {
   // function showE() {
   //   setfilteredLivros(E)
   // }
+  function pegarLivro(id){
 
+    
+    let index = livros.data.findIndex((e) => e.id == id)
+    let livro = livros.data[index]
+    return livro;
+  }
 
   return (
     <div>
@@ -100,16 +107,19 @@ const ListBooks = () => {
         <ul className="group-item">
           {livros.data.map((item) => {
             return (
-              <li className="item" key={item.id}>
-                <img src={item.imagem} />
-                <div className="title-group-item">
-                  <h2>{item.titulo}</h2>
-                  <p>{item.descricao}</p>
-                  <button className="btn-group-item" onClick={() => setModalId(item.id)}>Veja mais</button>
-                </div>
-             
-                <ModalLivro isOpen={Boolean(modalId)} onClickClose={() => setModalId(null)}>
-                  <div className='title-modal'>
+              <>
+                <li className="item"  key={item.id}>
+                  <img src={item.imagem} />
+                  <div className="title-group-item">
+                    <h2>{item.titulo}</h2>
+                    <p>{item.descricao}</p>
+                    <button className="btn-group-item" onClick={() => setModalId(item.id)}>Veja mais</button>
+                    
+                  </div>
+                </li>
+                <ModalLivro isOpen={Boolean(modalId)} onClickClose={() => setModalId(null)} >
+                  <div className='title-modal' >
+                    
                     <h2>{item.titulo}</h2>
                     <p>{item.descricao}</p>
                     <p>{item.titulo}</p>
@@ -124,14 +134,15 @@ const ListBooks = () => {
                   <div className='img-livro'>
                     <img src={item.imagem} alt='capa do livro'/>
                   </div>
-               </ModalLivro> 
-     
-              </li>
+                  
+                </ModalLivro>
+             </>
             );
           })}
         </ul>
       )}
 
+                  
 
 
       {livros.count && (
