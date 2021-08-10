@@ -23,9 +23,12 @@ const ListBooks = () => {
 
   useEffect(() => {
 
-
+     const query = ({
+       
+     })
+     
     api.get("/").then((res) => setItens(res.data));
-    
+
 
   }, []);
 
@@ -38,7 +41,7 @@ const ListBooks = () => {
       <HeaderTopo />
       <div className="selecao-idade">
         <div className="title-selecao-livros">
-          <h2>Encante-se com nossa seleção de livros por idade</h2>
+          <h2>Descubra nossa seleção de livros por idade</h2>
         </div>
       </div>
 
@@ -67,15 +70,15 @@ const ListBooks = () => {
       )}
 
 
-{/* 
-      {livros.meta && (
+
+      {livros.count && (
             <Pagination
               limit={LIMIT}
-              total={livros.meta.count}
+              total={livros.count}
               offset={offset}
               setOffset={setOffset}
             />
-      )} */}
+      )}
 
       {/* {livros.data && (
         <ModalLivro />

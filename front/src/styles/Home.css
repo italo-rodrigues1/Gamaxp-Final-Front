@@ -54,8 +54,7 @@ a{
     align-items: flex-start;
     justify-content: flex-end;
     color: #3D405B;
-    /* font-family: 'Poppins', sans-serif; */
-    font-size: 35px;
+    font-size: max(16px,2.3vw);
     font-weight: 400;
 }
 
@@ -160,14 +159,13 @@ a{
 /* seleção termina aqui */
 
 .main {
-    height: 400px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: #FFFFFF;
     padding: 10px 0px;
-    /* font-family: 'Poppins', sans-serif; */
     color: #3D405B;
 
 }
@@ -179,15 +177,15 @@ a{
 }
 
 .main .main-box {
-    width: 1440px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
+    width: auto;
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 1rem;
 }
 
 .main .main-box > div {
-    width: 250px;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,7 +201,7 @@ a{
 }
 
 .main .main-box > div span {
-    width: 50%;
+    width: 64%;
     text-align: center;
 }
 
@@ -212,7 +210,35 @@ a{
 
 
 /*************************************** RESPONSIVO ***************************************/
+@media screen and (max-width: 1200px) {
+    .hero .title .btn-hero {
+        height: 60px;
+        width: 200px;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+}
 
+@media screen and (max-width: 800px) {
+    .main .main-box {
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 1rem;
+    }
+
+    .title-selecao {
+        width: auto;  
+    }
+
+    .btn-selecao {
+        
+        height: 80px;
+        width: 452px;
+        font-size: 16px;
+    }
+}
 
 @media screen and (max-width:500px){
     .tarja-MEC {
@@ -222,5 +248,46 @@ a{
         width: 50%;
         height: 1%;
     }
+    .main .main-box {
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 1rem;
+    }
 
+    .main h4 {
+        font-size: 16px;
+    }
+
+    .title-selecao h3 {
+        font-size: 20px;
+    }
+
+    .title-selecao p {
+        font-size: 16px;
+    }
+
+    .btn-selecao {
+        width: auto;
+    }
+}
+
+@media screen and (max-width:400px){
+   
+  
+    .main .main-box {
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 1rem;
+    }
+    .main h4 {
+        text-align: center;
+    }
+    .main .main-box > div {
+       height:200px;
+    }
+    
 }
