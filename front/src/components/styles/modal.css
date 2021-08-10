@@ -6,7 +6,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     background: #00000008;
     top: 0;
     bottom: 0;
@@ -37,6 +37,13 @@
     align-items: flex-start;
 }
 
+.container-modal .modal .title-modal h2{
+    color: #81B29A;
+    margin-bottom: 10px;
+}
+.container-modal .modal .title-modal p{
+    margin: 10px 0;
+}
 .container-modal .modal .img-livro {
     height: 100%;
     width: 40%;

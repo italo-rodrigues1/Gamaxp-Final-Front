@@ -1,8 +1,0 @@
-{
-    "env" :{
-        "DB_USER" : "root",
-        "DB_PASSWORD" : "root",
-        "DB_DATABASE" : "gamaxp-final",
-        "DB_HOST" : "localhost" 
-    }
-}

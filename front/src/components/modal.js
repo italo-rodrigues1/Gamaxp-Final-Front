@@ -1,8 +1,6 @@
 import React from 'react';
 import './styles/modal.css'
 
-import urso from '../img/banner_urso_desktop.jpg'
-
 
 function ModalLivro ({children,isOpen,onClickClose}){
 
