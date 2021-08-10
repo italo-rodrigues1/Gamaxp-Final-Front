@@ -7,7 +7,7 @@
     width: 100%;
     position: fixed;
     z-index: 1;
-    background: #ffffff;
+    background: #00000008;
     top: 0;
     bottom: 0;
     left: 0;
@@ -19,17 +19,22 @@
 }
 
 .container-modal .modal {
-    background: rgb(85, 79, 79);
+    background: #fff;
     display: flex;
     height: 500px;
     width: 900px;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
 }
 
 .container-modal .modal .title-modal{
-    width:100%;
-    padding:50px;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .container-modal .modal .img-livro {
@@ -40,4 +45,23 @@
 .container-modal .modal img {
     height: 100%;
     width: 100%;
+}
+
+.container-modal .modal  .btn-modal-close{
+    position: absolute;
+    right: 22px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.container-modal .modal  .btn-modal-close:hover{
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+
 }

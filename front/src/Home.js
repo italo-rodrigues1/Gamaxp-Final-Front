@@ -1,13 +1,12 @@
 import React from 'react';
-import passarinho from './img/passarinho.png'
-import beneficio1 from './img/beneficio1.png'
-import beneficio2 from './img/beneficio2.png'
-import beneficio21 from './img/beneficio21.svg'
-import beneficio3 from './img/beneficio3.png'
-import beneficio4 from './img/beneficio4.png'
+import passarinho from './img/passarinho.png';
+import beneficio1 from './img/beneficio1.png';
+import beneficio21 from './img/beneficio21.svg';
+import beneficio3 from './img/beneficio3.png';
+import beneficio4 from './img/beneficio4.png';
 import { Link } from 'react-router-dom';
 import './styles/Home.css';
-import Backtotop from './components/buttonBackToTop'
+import Backtotop from './components/buttonBackToTop';
 import FooterContato from './components/footer';
 import HeaderTopo from './components/header';
 
@@ -42,7 +41,7 @@ function Home() {
                         <p>
                             Através de uma curadoria com especialistas de Educação, Psicologia e Pedagogia, nós selecionamos os melhores títulos de literatura infatil e infanto-juvenil.
                         </p>
-                        <Link className="btn-selecao"  to="/livros">
+                        <Link className="btn-selecao"  to="/list-books">
                            Descubra nossa seleção de livros
                         </Link>
                     </div>
