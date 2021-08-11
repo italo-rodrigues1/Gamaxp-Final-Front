@@ -4,7 +4,7 @@ import Backtotop from "./components/buttonBackToTop";
 import FooterContato from "./components/footer";
 import HeaderTopo from "./components/header";
 import ModalLivro from "./components/modal";
-import Pagination from "./components/paginacao";
+// import Pagination from "./components/paginacao";
 import "./styles/listBooks.css";
 // import { AiFillInstagram } from "react-icons/ai";
 // import { RiFacebookFill } from "react-icons/ri";
@@ -29,13 +29,14 @@ const ListBooks = () => {
 
   const [ageFilter, setAgeFilter] = useState("");
 
-  console.log(livros);
+ 
   useEffect(() => {
-    setItens({});
-
+    
+    setItens({})
     api.get("/").then((res) => setItens(res.data));
   }, []);
 
+  
   return (
     <div>
       <HeaderTopo />
@@ -175,7 +176,7 @@ const ListBooks = () => {
           })}
         </ul>
       )}
-
+{/* 
       {livros.count && (
         <Pagination
           limit={LIMIT}
@@ -183,7 +184,7 @@ const ListBooks = () => {
           offset={offset}
           setOffset={setOffset}
         />
-      )}
+      )} */}
 
       <FooterContato />
       <Backtotop />
