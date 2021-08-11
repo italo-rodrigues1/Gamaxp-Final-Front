@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Backtotop from "./components/buttonBackToTop";
 import FooterContato from "./components/footer";
 import HeaderTopo from "./components/header";
@@ -31,49 +31,14 @@ const ListBooks = () => {
   const [autor, setAutor] = useState("");
   const [editora, setEditora] = useState("");
 
+  const [ageFilter, setAgeFilter] = useState("");
+
+  console.log(livros);
   useEffect(() => {
     setItens({});
 
     api.get("/").then((res) => setItens(res.data));
   }, []);
-
- 
-  
-  // const livro = api.get("/");
-
-  // if(livros){
-
-  //   var A = livros.data.idade.filter(e => e.type === "0-1")
-  //   var B = livros.data.idade.filter(e => e.type === "2-3")
-  //   var C = livros.data.idade.filter(e => e.type === "4-6")
-  //   var D = livros.data.idade.filter(e => e.type === "7-10")
-  //   var E = livros.data.idade.filter(e => e.type === "10+")
-  // }
-
-  // function showA() {
-  //   setfilteredLivros(A)
-  // }
-
-  // function showB() {
-  //   setfilteredLivros(B)
-  // }
-
-  // function showC() {
-  //   setfilteredLivros(C)
-  // }
-
-  // function showD() {
-  //   setfilteredLivros(D)
-  // }
-
-  // function showE() {
-  //   setfilteredLivros(E)
-  // }
-  // function pegarLivro(id) {
-  //   let index = livros.data.findIndex((e) => e.id == id);
-  //   let livro = livros.data[index];
-  //   return livro;
-  // }
 
   return (
     <div>
@@ -85,20 +50,15 @@ const ListBooks = () => {
       </div>
 
       <div className="container-filter">
-        <button>bebês(até 1 ano)</button>
-        <button>2-3 anos</button>
-        <button>4-6 anos</button>
-        <button>7-10 anos</button>
-        <button>10-13 anos</button>
-
-        {/* <button onClick={() => showA()} >bebês(até 1 ano)</button>
-          <button  onClick={() => showB()} >2-3 anos</button>
-          <button  onClick={() => showC()}>4-6 anos</button>
-          <button onClick={() => showD()} >7-10 anos</button>
-          <button onClick={() => showE()}  >10-13 anos</button> */}
+        <button onClick={() => setAgeFilter("0-1")}>bebês(até 1 ano)</button>
+        <button onClick={() => setAgeFilter("2-3")}>2-3 anos</button>
+        <button onClick={() => setAgeFilter("4-6")}>4-6 anos</button>
+        <button onClick={() => setAgeFilter("7-10")}>7-10 anos</button>
+        <button onClick={() => setAgeFilter("10+")}>10-13 anos</button>
+        <Link to="list-books">Todos</Link>
       </div>
 
-      {livros.data && (
+      {livros.data && !ageFilter && (
         <ul className="group-item">
           {livros.data.map((item) => {
             return (
@@ -118,7 +78,6 @@ const ListBooks = () => {
                         setDescricao(item.descricao);
                         setAutor(item.autor);
                         setEditora(item.editora);
-                        
                       }}
                     >
                       Veja mais
@@ -135,8 +94,69 @@ const ListBooks = () => {
                     <p>{descricao}</p>
                     <p>Autor: {autor}</p>
                     <p>Editora: {editora}</p>
-                    
-                    
+
+                    {/* <div>
+                      Redes Sociais
+                      <Link to="#" className="link">
+                        <AiFillInstagram />
+                      </Link>
+                      <Link to="#">
+                        <RiFacebookFill />
+                      </Link>
+                      <Link to="#">
+                        <AiOutlineTwitter />
+                      </Link>
+                    </div> */}
+                  </div>
+                  <div className="img-livro">
+                    <img src={image} alt="capa do livro" />
+                  </div>
+                </ModalLivro>
+              </>
+            );
+          })}
+        </ul>
+      )}
+      {ageFilter !== "" && (
+        <ul className="group-item">
+          {livros.data.map((item) => {
+            return (
+              <>
+                {ageFilter == item.idade && (
+                  <li className="item" key={item.id}>
+                    <img src={item.imagem} />
+                    <div className="title-group-item">
+                      <h2>{item.titulo}</h2>
+                      <p>{item.descricao}</p>
+                      <button
+                        className="btn-group-item"
+                        onClick={() => {
+                          setModalId(!modalId);
+                          setImagem(item.imagem);
+                          setTitulo(item.titulo);
+                          setIdade(item.idade);
+                          setDescricao(item.descricao);
+                          setAutor(item.autor);
+                          setEditora(item.editora);
+                        }}
+                      >
+                        Veja mais
+                      </button>
+                    </div>
+                  </li>
+                )}
+
+                <ModalLivro
+                  isOpen={modalId}
+                  onClickClose={() => setModalId(null)}
+                >
+                  <div className="title-modal">
+                    <h2>{titulo}</h2>
+                    <p>Recomendados para : {idade}</p>
+                    <p>{descricao}</p>
+                    <p>Autor: {autor}</p>
+                    <p>Editora: {editora}</p>
+
                     {/* <div>
                       Redes Sociais
                       <Link to="#" className="link">
