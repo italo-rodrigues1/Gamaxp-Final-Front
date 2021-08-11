@@ -46,4 +46,3 @@ Para construir o front-end, utilizamos os seguintes recursos:
 * <a href="https://github.com" target="_blank">Luan Sales</a>
 * <a href="https://github.com/marcoscurymoreira" target="_blank">Marcos Moreira</a>
 * <a href="https://github.com/farelanders" target="_blank">Marcos Travagin</a>
-* 
