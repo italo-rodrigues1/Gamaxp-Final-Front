@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Backtotop from "./components/buttonBackToTop";
 import FooterContato from "./components/footer";
 import HeaderTopo from "./components/header";
 import ModalLivro from "./components/modal";
 import Pagination from "./components/paginacao";
 import "./styles/listBooks.css";
-import qs from "qs";
-import { AiFillInstagram } from "react-icons/ai";
-import { RiFacebookFill } from "react-icons/ri";
-import { AiOutlineTwitter } from "react-icons/ai";
+// import { AiFillInstagram } from "react-icons/ai";
+// import { RiFacebookFill } from "react-icons/ri";
+// import { AiOutlineTwitter } from "react-icons/ai";
 import { api } from "./services/api";
 
 // const api = 'https://gamaxpfinalapi.herokuapp.com/';
