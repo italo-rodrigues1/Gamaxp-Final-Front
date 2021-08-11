@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+**<h1 align="center"> <ins>LIVRERTIDO</ins> </h1>**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# :thinking: O que fizemos?
+Trata-se de um site com indicações de literatura infantil. Os usuários que têm interesse em ler para seus filhos, comprar livros para que seus filhos possam ler, ou ainda, presentear outros pais ou crianças, mas não sabem quais os melhores livros para cada idade, poderão acessar nosso site e pesquisar quais os livros indicados por faixa etária, ver o seu nome, ler a descrição completa do livro, acessar informações como autor e editora, além de visualizar a capa do livro em questão, podendo utilizar tais informações para comprar os livros de seu interesse. Além disso, os usuários poderão assinar nossa newsletter e ficar por dentro de todas as novidades do site.
+<br></br>
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# :hammer_and_wrench: O que utilizamos?
+Para construir o front-end, utilizamos os seguintes recursos:
+* [React v17.0.2](https://pt-br.reactjs.org/ "Dispenso apresentações.")
+* [ReactDOM v17.0.2](https://pt-br.reactjs.org/docs/react-dom.html "Sem o React eu nada seria.")
+* [React Router Dom v5.2.0](https://reactrouter.com/web/guides/quick-start "Sigam-me os bons!")
+* [ReactIcons v4.2.0](https://react-icons.github.io/react-icons/ "Nasci pra deixar tudo mais bonito.")
+* [Axios v0.21.1](https://axios-http.com/docs/intro "Eu promovo a união entre os povos")
+<br></br>
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+# :computer: E aí, como eu uso?
+* Antes de tudo, tá aqui o link para o projeto no GitHub, caso você tenha conseguido este README de formas misteriosas: [GitHub.](https://github.com/italo-rodrigues1/Gamaxp-Final-Front.git "Você vai precisar me clonar, mas não sou a ovelha Dolly")
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Faça um clone deste repositório **_$ git clone https://github.com/italo-rodrigues1/Gamaxp-Final-Front.git_**
+  
+* Entre no repositório criado **$ cd _Gamaxp-Final-Front_**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Rode o  **_$ npm install_** ou **_$ yarn_** para instalar as dependências.
+  
+* Suba o servidor com o comando **_$ npm start_** **_ou yarn start_**.
+  
+* Prontinho, você já deve conseguir acessar nosso site localmente no seu [localhost.](http://localhost:3000/ "To na área.")
+<br></br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# :bookmark_tabs: O que mais preciso saber?
+* Este é um projeto realizado durante o Gama XP37. A API deste projeto pode ser acessada neste [repositório.](https://github.com/farelanders/gamaxpfinal-api.git "Eu sou a mente por trás de tudo.") Não deixe de conferir!
+<br></br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# :nerd_face: Quem somos?
+* <a href="https://github.com/italo-rodrigues1" target="_blank">Ítalo Rodrigues</a>
+* <a href="https://github.com/marcoscurymoreira" target="_blank">Marcos Moreira</a>
+* <a href="https://github.com/farelanders" target="_blank">Marcos Travagin</a>
+* <a href="https://github.com" target="_blank">Luan Sales</a>
