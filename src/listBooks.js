@@ -87,7 +87,7 @@ const ListBooks = () => {
                 >
                   <div className="title-modal">
                     <h2>{titulo}</h2>
-                    <p>Recomendados para : {idade}</p>
+                    <p>Recomendado para crianças de {idade} ano(s).</p>
                     <p>{descricao}</p>
                     <p>Autor: {autor}</p>
                     <p>Editora: {editora}</p>
