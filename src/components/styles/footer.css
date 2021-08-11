@@ -1,13 +1,20 @@
+
+#contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3D405B;
+}
+
 .contato {
+    width: 1440px;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     background-color: #3D405B;
-    /* font-family: 'Poppins', sans-serif; */
-    color: #F4F1DE;
-        
+    color: #F4F1DE;  
 }
 
 .politica-privacidade{
@@ -98,3 +105,15 @@
     
 }
 
+@media screen and (max-width:400px){ 
+    .contato .formulario{
+        width: none;
+        padding: 10px;
+    }
+    .contato .formulario form input {
+        width: 100%;
+    }
+    .contato .formulario h3 {
+        font-size:16px;
+    }
+}

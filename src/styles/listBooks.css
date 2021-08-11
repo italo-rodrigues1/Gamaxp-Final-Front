@@ -131,11 +131,18 @@ li{
     
     .title-selecao-livros h2 {
         width: auto;
+        text-shadow: 2px 2px #ffffff57;
     }
 
     .container-filter button {
     
         font-size: 16px;
+    }
+}
+@media screen and (max-width:500px){
+    .container-filter {
+        display: grid;
+        padding-top: 0px;
     }
 }
 

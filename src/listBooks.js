@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Backtotop from "./components/buttonBackToTop";
 import FooterContato from "./components/footer";
 import HeaderTopo from "./components/header";
-import FiltroBtn from "./components/filtroBtn";
 import ModalLivro from "./components/modal";
 import Pagination from "./components/paginacao";
 import "./styles/listBooks.css";
@@ -20,10 +19,8 @@ const LIMIT = 12;
 const ListBooks = () => {
   const [offset, setOffset] = useState(0);
   const [livros, setItens] = useState([]);
-  const [filteredPolls, setfilteredLivros] = useState(null);
   const [modalId, setModalId] = useState(false);
-  const [arrayModal, setArrayModal] = useState([]);
-
+  
   const [image, setImagem] = useState("");
   const [titulo, setTitulo] = useState("");
   const [descricao, setDescricao] = useState("");
