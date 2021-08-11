@@ -27,8 +27,7 @@ function footerContato() {
                 </div>
                 <div className="formulario">
                     <h3>Fique por dentro das novidades</h3>
-                    <form method="post" >
-                        <input type="text" placeholder="Seu nome" />
+                    <form method="post" >                        <input type="text" placeholder="Seu nome" />
                         <input type="email" placeholder="Email" />
                         <button type="submit">Quero receber novidades</button>
                     </form>
