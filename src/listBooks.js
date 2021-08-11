@@ -55,7 +55,7 @@ const ListBooks = () => {
         <button onClick={() => setAgeFilter("4-6")}>4-6 anos</button>
         <button onClick={() => setAgeFilter("7-10")}>7-10 anos</button>
         <button onClick={() => setAgeFilter("10+")}>10-13 anos</button>
-        <Link to="list-books">Todos</Link>
+        <button onClick={() => setAgeFilter()}>Todos</button>
       </div>
 
       {livros.data && !ageFilter && (
