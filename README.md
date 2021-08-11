@@ -3,94 +3,46 @@
 
 
 # :thinking: O que fizemos?
-Trata-se de uma RESP API para um e-commerce. Utilizando os métodos e arquitetura REST, desenvolvemos um projeto para apresentar todo o estoque do e-commerce, buscar um produto específico, incluir novos produtos e alterar dados de produtos existentes. <ins>Versão 2.0 da nossa API, desta vez criando a conexão ao banco de dados MySQL e utilizando os dados que lá estão.</ins>
+Trata-se de um site com indicações de literatura infantil. Os usuários que têm interesse em ler para seus filhos, comprar livros para que seus filhos possam ler, ou ainda, presentear outros pais ou crianças, mas não sabem quais os melhores livros para cada idade, poderão acessar nosso site e pesquisar quais os livros indicados por faixa etária, ver o seu nome, ler a descrição completa do livro, acessar informações como autor e editora, além de visualizar a capa do livro em questão, podendo utilizar tais informações para comprar os livros de seu interesse. Além disso, os usuários poderão assinar nossa newsletter e ficar por dentro de todas as novidades do site.
 <br></br>
 
 
 
-># O que utilizamos?
-* [NodeJS v14.17.0](https://nodejs.org/en/ "Dispenso apresentações.")
-* [Express 4.17.1](https://expressjs.com/pt-br/ "Não liga pra ele, ele se acha demais!")
-* [MySQL Workbench 8.0.25](https://www.mysql.com/products/workbench/ "Fica tranquilo, tá tudo guardadinho aqui.")
+# :hammer_and_wrench: O que utilizamos?
+Para construir o front-end, utilizamos os seguintes recursos:
+* [React v17.0.2](https://pt-br.reactjs.org/ "Dispenso apresentações.")
+* [ReactDOM v17.0.2](https://pt-br.reactjs.org/docs/react-dom.html "Sem o React eu nada seria.")
+* [React Router Dom v5.2.0](https://reactrouter.com/web/guides/quick-start "Sigam-me os bons!")
+* [ReactIcons v4.2.0](https://react-icons.github.io/react-icons/ "Nasci pra deixar tudo mais bonito.")
+* [Axios v0.21.1](https://axios-http.com/docs/intro "Eu promovo a união entre os povos")
 <br></br>
 
 
 
-># E aí, como eu uso?
-* Antes de tudo, tá aqui o link para o projeto no GitHub, caso você tenha conseguido este README de formas misteriosas: [GitHub.](https://github.com/marcoscurymoreira/ecommerce-api-gama-2db.git "Você vai precisar me clonar, mas não sou a ovelha Dolly")
+# :computer: E aí, como eu uso?
+* Antes de tudo, tá aqui o link para o projeto no GitHub, caso você tenha conseguido este README de formas misteriosas: [GitHub.](https://github.com/italo-rodrigues1/Gamaxp-Final-Front.git "Você vai precisar me clonar, mas não sou a ovelha Dolly")
 
-* Agora, vamos importar nosso banco de dados todo prontinho? Você pode encontrar os scripts SQL bem [aqui no repositório.](https://github.com/marcoscurymoreira/ecommerce-api-gama-2db/tree/main/script_db_mysql "Achei muito estranho os preços destes produtos.") Depois de baixar o arquivo, é só criar seu schema no MySQL, rodar o script e _voilà_, o banco de dados está pronto para ser usado.
-
-* Faça um clone deste repositório **_$ git clone https://github.com/marcoscurymoreira/ecommerce-api-gama-2db.git_**
+* Faça um clone deste repositório **_$ git clone https://github.com/italo-rodrigues1/Gamaxp-Final-Front.git_**
   
-* Entre no repositório criado **$ cd _ecommerce-api-gama-2db_**
+* Entre no repositório criado **$ cd _Gamaxp-Final-Front_**
 
-* Rode o  **_$ npm install_** para instalar as dependências.
-
-* Altere suas credencias para acesso ao banco de dados no index.js, incluindo seu user, password e database.
+* Rode o  **_$ npm install_** ou **_$ yarn_** para instalar as dependências.
   
-* Suba o servidor com o comando **_$ npm start_**.
+* Suba o servidor com o comando **_$ npm start_** **_ou yarn start_**.
   
-* Vamos precisar também de uma plataforma para os testes da nossa API. Existem algumas opções no mercado, mas nós utilizamos o [Postman](https://www.postman.com/ "Eu não sou o homem poste. ¬¬"). Você pode baixá-lo [aqui](https://www.postman.com/downloads/ "Clique sem medo, não sou um vírus") ou escolher outro de sua preferência.
+* Prontinho, você já deve conseguir acessar nosso site localmente no seu [localhost.](http://localhost:3000/ "To na área.")
 <br></br>
 
 
 
-># Vamos fazer alguns testes?
-
-Ok, clonamos o projeto, instalamos o que era necessário e nosso servidor está rodando. Agora é só abrir o [Postman](https://www.postman.com/ "Olha eu aqui de novo"), ou sua plataforma de testes preferida, e colocar a mão na massa.
+# :bookmark_tabs: O que mais preciso saber?
+* Este é um projeto realizado durante o Gama XP37. A API deste projeto pode ser acessada neste [repositório.](https://github.com/farelanders/gamaxpfinal-api.git "Eu sou a mente por trás de tudo.") Não deixe de conferir!
 <br></br>
 
 
 
-* Utilizando o método <ins>**GET**</ins> para retornar toda a lista de produtos: http://localhost:3000/produto
-
-    * <ins>Detalhes adicionais:</ins> deverá retornar toda a lista de produtos e CODE 200.
-<br></br>
-
-
-
- * Utilizando o método <ins>**GET**</ins> para retornar um item da lista de produtos: http://localhost:3000/produto/{id}
-  
-    * <ins>Detalhes adicionais:</ins> as IDs válidas são do 1 ao 10, qualquer outra ID deverá retornar Code 404. Caso o ID esteja correto, deverá retornar o produto referente e CODE 200.
-<br></br>
-
-
-
-* Utilizando o método <ins>**POST**</ins> para incluir um novo produto na base de dados: http://localhost:3000/produto
-
-    * <ins>Detalhes adicionais:</ins> todos os dados deverão ser preenchidos para a correta inclusão do novo produto na base de dados, caso contrário, deverá retornar Code 400. Caso esteja tudo correto, deverá retornar o objeto inserido e CODE 200.
- <br></br>
-
-
-
- * Utilizando o método <ins>**PUT**</ins> para alterar um dado na nossa lista de produtos: http://localhost:3000/produto/{id}
-
-    * <ins>Detalhes adicionais:</ins> caso o ID informado seja inexistente em nossa base de dados, deverá retornar CODE 404. Se for passado algum objeto incompleto ou zerado, deverá retornar CODE 400. Caso dê tudo certo, deverá retornar o próprio objeto e CODE 200.
-<br></br>
-
-
-
-* Utilizando o método <ins>**GET**</ins> para retornar toda a lista de departamentos: http://localhost:3000/departamento 
-  
-    * <ins>Detalhes adicionais:</ins> deverá retornar toda a lista de departamentos e CODE 200.
-<br></br>
-
-
-
-* Utilizando o método <ins>**GET**</ins> para retornar toda a lista de produtos de um determinado departamento: http://localhost:3000/departamento/{id} 
-  
-    * <ins>Detalhes adicionais:</ins> caso o ID do departamento informado seja inexistente em nossa base de dados, deverá retornar CODE 404. Caso dê tudo certo, deverá retornar a lista de produtos daquele departamento e CODE 200.
-<br></br>
-
-
-
-># O que mais preciso saber?
-* Este é um projeto realizado durante o Gama XP37. Todos os dados utilizados são fictícios.
-<br></br>
-
-
-
-># Quem somos?
-* <a href="https://github.com/anderleyson" target="_blank">Anderley Quinteiro</a>
+# :nerd_face: Quem somos?
+* <a href="https://github.com/italo-rodrigues1" target="_blank">Ítalo Rodrigues</a>
 * <a href="https://github.com/marcoscurymoreira" target="_blank">Marcos Moreira</a>
+* <a href="https://github.com/farelanders" target="_blank">Marcos Travagin</a>
+* <a href="https://github.com" target="_blank">Luan Sales</a>
