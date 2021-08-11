@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState }from 'react';
 import './styles/footer.css'
 import { Link } from 'react-router-dom';
 import politicaPrivacidade from '../img/Politica_Privacidade.pdf';
 import temosUso from '../img/Termos_de_uso.pdf';
+// import { api } from "../services/api";
+import axios from 'axios';
 
-function footerContato() {
+const  FooterContato = () => {
+
+    // useEffect(() => {
+    
+    //     // setItens({})
+    //     // api.post("/send").then((res) => setInputValue(res.data));
+        
+    // }, []);
+
+    const [emailUser,setEmailUser] = useState('')
+    const [emailNome,setEmailNome] = useState('')
+
+
+
+    function handleSubmit(e){
+        e.preventDefault();
+        axios.post("https://gamaxpfinalapi.herokuapp.com/send", {emailUser:emailUser,emailNome:emailNome})
+    }
+    
+    
     return (
         <section id="contato">
             <div className="contato">
@@ -27,8 +48,9 @@ function footerContato() {
                 </div>
                 <div className="formulario">
                     <h3>Fique por dentro das novidades</h3>
-                    <form method="post" >                        <input type="text" placeholder="Seu nome" />
-                        <input type="email" placeholder="Email" />
+                    <form method="post" onSubmit={handleSubmit}  >       
+                        <input type="text" placeholder="Seu nome" onChange={(e) => setEmailNome(e.target.value) } />
+                        <input type="email" placeholder="Email" onChange={(e) => setEmailUser(e.target.value) }  required />
                         <button type="submit">Quero receber novidades</button>
                     </form>
                 </div>
@@ -37,5 +59,5 @@ function footerContato() {
     )
 };
 
-export default footerContato;
+export default FooterContato;
 
