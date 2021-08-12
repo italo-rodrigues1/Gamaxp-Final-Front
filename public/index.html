@@ -7,16 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <title>Livrertido</title>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:ital,wght@0,400;0,500;0,600;1,400&family=Roboto&display=swap" rel="stylesheet">
+  <title>Livrertido</title>
 </head>
+
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <script>
+      if ('serviceWorker' in navigator) {
+        // Register a service worker hosted at the root of the
+        // site using the default scope.
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          console.log('Service worker registration succeeded:', registration);
+        }, function(error) {
+          console.log('Service worker registration failed:', error);
+        });
+      } else {
+        console.log('Service workers are not supported.');
+      }
+  </script>
+
 </body>
 
 </html>
