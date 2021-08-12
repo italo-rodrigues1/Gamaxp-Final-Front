@@ -14,22 +14,47 @@ a{
     text-decoration: none;
 }
 
+/* 
+@media screen and (min-width: 1500px) {
+    .container-title{
+        top: 34%!important;
+        left: -17%!important;
+    }
+
+} */
+
+@media screen and (min-width: 1440px) {
+    .container-title{
+        top: 44%!important;
+        left: -17%!important;
+    }
+
+}
+
+@media screen and (max-width: 631px) and (min-width: 500px) {
+    .container-title{
+        left: -8%!important;
+    }
+
+}
+
 @media screen and (min-width: 500px) {
     .container-title{
         position: absolute;
         top: 50%;
         left: -21%;
         text-align: left!important;
+        max-width: none!important;
     }
 
     .container-title .title-hero{
         align-items: start!important;
         text-align: left!important;
+        height: auto!important;
     }
 }
 
 .container-title{
-    max-width: 1440px;
     width: 100%;
     display: flex;
     margin: 0 auto;
