@@ -10,7 +10,7 @@ function headerTopo() {
                 <div className="logo"> <Link to="/"><img src={logo} alt="logo" /></Link></div>
                 <ul>
                     <li>
-                        <a href='#sobre'>Livros por idade</a>
+                        <Link to='list-books'>Livros por idade</Link>
                     </li>
                     <li>
                         <a href='#contato'>Sobre</a>
