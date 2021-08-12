@@ -23,7 +23,7 @@ a{
     }
 
     .container-title .title-hero{
-        align-items: end!important;
+        align-items: start!important;
         text-align: left!important;
     }
 }
