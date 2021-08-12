@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Allow: /list-books

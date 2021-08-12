@@ -15,15 +15,15 @@ const  FooterContato = () => {
         
     // }, []);
 
-    const [emailUser,setEmailUser] = useState('')
-    const [emailNome,setEmailNome] = useState('')
+    // const [emailUser,setEmailUser] = useState('')
+    // const [emailNome,setEmailNome] = useState('')
 
 
 
-    function handleSubmit(e){
-        e.preventDefault();
-        axios.post("https://gamaxpfinalapi.herokuapp.com/send", {emailUser:emailUser,emailNome:emailNome})
-    }
+    // function handleSubmit(e){
+    //     e.preventDefault();
+    //     axios.post("https://gamaxpfinalapi.herokuapp.com/send", {emailUser:emailUser,emailNome:emailNome})
+    // }
     
     
     return (
@@ -48,9 +48,11 @@ const  FooterContato = () => {
                 </div>
                 <div className="formulario">
                     <h3>Fique por dentro das novidades</h3>
-                    <form method="post" onSubmit={handleSubmit}  >       
-                        <input type="text" placeholder="Seu nome" onChange={(e) => setEmailNome(e.target.value) } />
-                        <input type="email" placeholder="Email" onChange={(e) => setEmailUser(e.target.value) }  required />
+                    <form method="post">       
+                        <input type="text" placeholder="Seu nome" /> 
+                        {/* onChange={(e) => setEmailNome(e.target.value) } */}
+                        <input type="email" placeholder="Email"   required />
+                        {/* onChange={(e) => setEmailUser(e.target.value) } */}
                         <button type="submit">Quero receber novidades</button>
                     </form>
                 </div>
