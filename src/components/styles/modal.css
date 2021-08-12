@@ -47,11 +47,13 @@
 .container-modal .modal .img-livro {
     height: 100%;
     width: 40%;
+    margin-right: 20px;
 }
 
 .container-modal .modal img {
     height: 100%;
     width: 100%;
+    object-fit: scale-down;
 }
 
 .container-modal .modal  .btn-modal-close{
@@ -81,6 +83,7 @@
 @media screen and (max-width:766px){
     .container-modal .modal .title-modal{
        overflow:scroll;
+       padding: 20px 50px
     }
 
 }
@@ -95,6 +98,8 @@
     .container-modal .modal .img-livro {
         overflow: hidden;
         width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
 }
