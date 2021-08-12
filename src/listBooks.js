@@ -146,6 +146,7 @@ const ListBooks = () => {
                 <ModalLivro
                   isOpen={modalId}
                   onClickClose={() => setModalId(null)}
+                  
                 >
                   <div className="title-modal">
                     <h2>{titulo}</h2>

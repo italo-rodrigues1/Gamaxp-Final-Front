@@ -6,7 +6,7 @@
   <link rel="icon" href="%PUBLIC_URL%/logo-favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
+  <meta name="description" content="Site criado para o desafio final gamaxp-fullstack" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,13 +15,15 @@
 </head>
 
 
-<body>
+<body id="body-teste">
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <script>
       if ('serviceWorker' in navigator) {
-        // Register a service worker hosted at the root of the
-        // site using the default scope.
+        
+        // Registre um service worker hospedado na raiz do
+        // site usando o escopo padrão.
+
         navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
           console.log('Service worker registration succeeded:', registration);
         }, function(error) {
