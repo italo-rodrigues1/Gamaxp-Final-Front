@@ -59,4 +59,18 @@ header ul li a:hover {
         align-items: center;
         justify-content: center;
     }
+    header {
+        
+        background:none;
+    
+    }
+}
+
+@media screen and (min-width: 500px) {
+
+    header {
+        
+        background: #ffffff;
+    
+    }
 }

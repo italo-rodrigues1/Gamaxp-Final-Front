@@ -87,7 +87,7 @@ li{
 
 .group-item .item .btn-group-item{
     padding:10px;
-    background:rgb(48, 187, 106);
+    background:#81B29A;
     border: none;
     color:#fff;
     font-size:10px;
@@ -112,6 +112,7 @@ li{
 }
 
 /******************************************* RESPONSIVIDADE ****************************************** */
+
 
 
 @media screen and (max-width:946px){
@@ -139,11 +140,23 @@ li{
         font-size: 16px;
     }
 }
+
 @media screen and (max-width:500px){
     .container-filter {
         display: grid;
         padding-top: 0px;
     }
+    .title-selecao-livros {
+        align-items: flex-end;
+        padding: 10px 30px;
+        text-align: center;
+    }
+    .selecao-idade {
+        background: url('../img/banner_3_mob.jpg')no-repeat center;
+        height:600px;
+        
+    }
+    
 }
 
 @media screen and (max-width:451px){

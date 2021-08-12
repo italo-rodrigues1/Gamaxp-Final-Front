@@ -97,6 +97,7 @@
     .contato .description-contato {
         width: 100%;  
         text-align: -moz-center; 
+        text-align: -webkit-center;
     }
 
     .contato .formulario{

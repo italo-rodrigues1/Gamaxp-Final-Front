@@ -15,14 +15,14 @@ function Home() {
         <div className="App">
             <section>
                 <HeaderTopo />
-                <div className="hero">
-                    <div className='container'>
-                        <div className="title">
+                <div className="hero"></div>
+                <div className='container-title'>
+                        <div className="title-hero">
                             <h3>Viaje com o seu pequeno por <br></br>lugares incríveis através da leitura</h3>
                             <a className='btn-hero' href="#sobre">Embarque aqui</a>
                         </div>
-                    </div>
                 </div>
+
                 <div className="tarja-MEC">
                     <img src={passarinho} alt="pássaro lendo" />
                     <span>Somos reconhecidos pelos melhores profissionais em Educação, Psicologia e Pedagogia, por disponibilizar<br></br> em nosso catálogo títulos de qualidade que proporcionam a melhor experiência de aprendizagem infantil. </span>

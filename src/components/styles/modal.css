@@ -57,6 +57,7 @@
 .container-modal .modal  .btn-modal-close{
     position: absolute;
     right: 8px;
+    top: 0;
     padding: 4px 11px;
     margin: 10px 0;
     border: none;
@@ -87,10 +88,10 @@
 
 @media screen and (max-width:500px){
     .container-modal .modal {
-
         overflow: auto;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
+
     .container-modal .modal .img-livro {
         overflow: hidden;
         width: 100%;

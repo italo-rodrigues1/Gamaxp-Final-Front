@@ -14,6 +14,67 @@ a{
     text-decoration: none;
 }
 
+@media screen and (min-width: 500px) {
+    .container-title{
+        position: absolute;
+        top: 50%;
+        left: -21%;
+        text-align: left!important;
+    }
+
+    .container-title .title-hero{
+        align-items: end!important;
+        text-align: left!important;
+    }
+}
+
+.container-title{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-title .title-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+}  
+
+
+.container-title .title-hero h3{
+    color: #3D405B;
+    font-size: max(20px,2.3vw);
+}
+
+.container-title .title-hero a{
+    background: #81B29A;
+    height: 95px;
+    width: 360px;
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-top: 15px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container-title .title-hero a:hover {
+    transform: scale(105%);
+    background-color: #3D405B;
+    font-weight: 600;
+}
+
+
 .container {
     width: 1440px;
     display: flex;
@@ -26,6 +87,7 @@ a{
     height: auto;
     width: 100%;
     overflow: hidden;
+    background: #f7e6c8;
 }
 
 /* terminando global */
@@ -41,37 +103,7 @@ a{
     padding: 20px;
 }
 
-.hero .title {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    color: #3D405B;
-    font-size: max(16px,2.3vw);
-    font-weight: 400;
-}
 
-.hero .title .btn-hero {
-    background: #81B29A;
-    height: 95px;
-    width: 360px;
-    text-decoration: none;
-    color: #FFFFFF;
-    margin-top: 50px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: .2s linear;
-}
-
-.hero .title .btn-hero:hover {
-    transform: scale(105%);
-    background-color: #3D405B;
-    font-weight: 600;
-}
 
 /* hero termina aqui */
 
@@ -90,12 +122,10 @@ a{
 }
 
 .tarja-MEC span {
-    /* font-family: 'Poppins', sans-serif; */
     font-size: 18px;
     margin-left: 20px;
     color: #3D405B;
 }
-
 
 #sobre {
     width: 100%;
@@ -109,7 +139,6 @@ a{
 
 .title-selecao {
     width: 45%;
-    /* font-family: 'Poppins', sans-serif; */
 }
 
 .title-selecao h3 {
@@ -202,7 +231,7 @@ a{
 
 /*************************************** RESPONSIVO ***************************************/
 @media screen and (max-width: 1200px) {
-    .hero .title .btn-hero {
+    .container-title .title-hero a{
         height: 60px;
         width: 200px;
         margin-top: 30px;
@@ -232,6 +261,11 @@ a{
 }
 
 @media screen and (max-width:500px){
+    .hero {
+        align-items: flex-end; 
+        background-position: 75%;
+    }
+
     .container {
     
         justify-content:center;
@@ -241,10 +275,12 @@ a{
     .tarja-MEC {
         flex-direction: column;
     }
+
     .tarja-MEC img {
         width: 50%;
         height: 1%;
     }
+
     .main .main-box {
         width: auto;
         height: auto;
@@ -272,7 +308,6 @@ a{
 
 @media screen and (max-width:400px){
    
-  
     .main .main-box {
         width: auto;
         height: auto;
