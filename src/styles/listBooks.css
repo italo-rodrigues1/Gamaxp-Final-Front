@@ -41,6 +41,28 @@ li{
     border: none;
     cursor: pointer;
     transition: .2s ease;
+    position: relative;
+    height: 30px;
+    font-weight: 600;
+    color: #3D405B;
+}
+
+.container-filter button::before{
+    content: '';
+    width: 50%;
+    height: 20px;
+    background: #f8f0d9;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    color: #fff;
+    transition: 1s linear;
+    mix-blend-mode: multiply;
+}
+
+.container-filter button:hover::before{
+    width: 100%;
 }
 
 .container-filter button:hover{
@@ -143,14 +165,22 @@ li{
 
 @media screen and (max-width:500px){
     .container-filter {
-        display: grid;
         padding-top: 0px;
+        align-items: center;
+        flex-direction: column;
+        height: 300px;
     }
+
+    .container-filter button {
+        margin: 4px 0;
+    }
+
     .title-selecao-livros {
         align-items: flex-end;
         padding: 10px 30px;
         text-align: center;
     }
+
     .selecao-idade {
         background: url('../img/banner_3_mob.jpg')no-repeat center;
         height:600px;
