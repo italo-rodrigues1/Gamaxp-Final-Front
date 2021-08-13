@@ -42,6 +42,12 @@ Para construir o front-end, utilizamos os seguintes recursos:
 
 
 # :nerd_face: Quem somos?
+<<<<<<< HEAD
 * [Ítalo Rodrigues](https://github.com/italo-rodrigues1)
 * [Marcos Moreira](https://github.com/marcoscurymoreira)
 * [Marcos Travagin](https://github.com/farelanders)
+=======
+* <a href="https://github.com/italo-rodrigues1" target="_blank">Ítalo Rodrigues</a>
+* <a href="https://github.com/marcoscurymoreira" target="_blank">Marcos Moreira</a>
+* <a href="https://github.com/farelanders" target="_blank">Marcos Travagin</a>
+>>>>>>> 01327cb85bfac6888c066a2302c96057f21f01fb
