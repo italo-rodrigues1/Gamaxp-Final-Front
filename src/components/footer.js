@@ -41,7 +41,7 @@ const  FooterContato = () => {
                         Precisa de ajuda?
                     </strong>
                     <p>
-                        Entre em contato através do e-mail suporte@livrertido.com.br
+                        Entre em contato através do e-mail livrertido@gmail.com
                     </p>
                     <strong>
                        <Link to={politicaPrivacidade} target="_blank" className="politica-privacidade">Política de privacidade </Link> <br></br> <Link to={temosUso} target="_blank" className="politica-privacidade">Termos de uso</Link> 
