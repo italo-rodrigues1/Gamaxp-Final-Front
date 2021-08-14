@@ -67,8 +67,13 @@
     color: #000000;
 }
 
+input[type=text]{
+    text-transform: uppercase;
+}
+
 .contato .formulario form input::placeholder {
     color: #000000;
+    text-transform: capitalize;
 }
 
 .contato .formulario form button {

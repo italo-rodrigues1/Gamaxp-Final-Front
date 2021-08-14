@@ -50,7 +50,7 @@ const  FooterContato = () => {
                 <div className="formulario">
                     <h3>Fique por dentro das novidades</h3>
                     <form method="post" onSubmit={handleSubmit}>       
-                        <input type="text" placeholder="Seu nome" onChange={value => setEmailNome(value.target.value)} /> 
+                        <input type="text" placeholder="Seu nome" onChange={value => setEmailNome(value.target.value)} minlength="3" maxlength="10" pattern="^[a-zA-Z]+$" required /> 
                         
                         <input type="email" placeholder="Email" onChange={(e) => setEmailUser(e.target.value)} required />
                        
