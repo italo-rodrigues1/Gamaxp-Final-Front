@@ -67,10 +67,6 @@
     color: #000000;
 }
 
-input[type=text]{
-    text-transform: uppercase;
-}
-
 .contato .formulario form input::placeholder {
     color: #000000;
     text-transform: capitalize;
@@ -90,6 +86,35 @@ input[type=text]{
     opacity: 0.8;
 }
 
+/******************************************* CUSTOM DIV ERRRO *******************************************/
+
+.container-erro{
+    position: fixed;
+    top: 4px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 500px;
+    height: 54px;
+    background: #29324e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.container-erro p{
+    margin: 0 10px;
+}
+
+.success{
+    color: #379137;
+}
+
+.failed{
+    color: #ff3e3e;
+}
 /******************************************* RESPONSIVIDADE ****************************************** */
 
 
@@ -108,7 +133,13 @@ input[type=text]{
     .contato .formulario{
         margin: 10px 0;
     }
-    
+  
+}
+
+@media screen and (max-width:550px){
+    .container-erro {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:400px){ 

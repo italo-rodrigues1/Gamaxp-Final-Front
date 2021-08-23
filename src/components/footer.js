@@ -1,9 +1,11 @@
-import React, { useEffect, useState }from 'react';
+import React, { useState }from 'react';
 import './styles/footer.css'
 import { Link } from 'react-router-dom';
 import politicaPrivacidade from '../img/Politica_Privacidade.pdf';
 import temosUso from '../img/Termos_de_uso.pdf';
 import axios from 'axios';
+import { AiOutlineCheckCircle } from 'react-icons/ai';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 const  FooterContato = () => {
 
@@ -11,19 +13,24 @@ const  FooterContato = () => {
 
     const [emailUser,setEmailUser] = useState('')
     const [emailNome,setEmailNome] = useState('')
+    const [erro,setErro] = useState(false)
 
 
+    
 
-    function handleSubmit(e){
+    const HandleSubmit = (e) =>{
         e.preventDefault();
-        axios.post("https://gamaxpfinalapi.herokuapp.com/send", {emailUser:emailUser,emailNome:emailNome})
-        if(emailUser){
-            alert("Enviado com sucesso")
-        }
-        else{
-            alert("Erro ao enviar")
-        }
+        axios.post("https://gamaxpfinalapi.herokuapp.com/send",{emailUser:emailUser,emailNome:emailNome})
+        .then(response =>{
+            setErro(true)
+            setTimeout(() => {
+                setErro(false);
+            }, 8000);
+        })
+        .catch(err =>{ setErro(false)} )
     }
+
+   
     
     
 
@@ -49,15 +56,23 @@ const  FooterContato = () => {
                 </div>
                 <div className="formulario">
                     <h3>Fique por dentro das novidades</h3>
-                    <form method="post" onSubmit={handleSubmit}>       
-                        <input type="text" placeholder="Seu nome" onChange={value => setEmailNome(value.target.value)} minlength="3" maxlength="10" pattern="^[a-zA-Z]+$" required /> 
+                    <form method="post" onSubmit={HandleSubmit}>       
+                        <input type="text" placeholder="Seu nome" onChange={value => setEmailNome(value.target.value)}  pattern="[A-Za-zÀ-ú ']{4,}" required /> 
                         
                         <input type="email" placeholder="Email" onChange={(e) => setEmailUser(e.target.value)} required />
                        
                         <button type="submit">Quero receber novidades</button>
+
                     </form>
                 </div>
             </div>
+            { erro  ? 
+                    <div className="container-erro success">
+                        <AiOutlineCheckCircle/>
+                        <p>Email enviado com sucesso!!</p>
+                    </div>
+
+                    :  false}
         </section>
     )
 };
